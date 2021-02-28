@@ -34,7 +34,7 @@ This is a collection of my UserChrome scripts, may be seperated, more than likel
 }
 
 :root {
-  --sidebar-width: 58px;
+  --sidebar-width: 50px;
   --toolbar-height: -50px;
   --menubar-height: -75px;
   --toolmenubar-height: -80px;
