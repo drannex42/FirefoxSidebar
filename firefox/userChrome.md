@@ -30,7 +30,7 @@ This is a collection of my UserChrome scripts, may be seperated, more than likel
   min-width: 260px !important;
   max-width: 260px !important;
   z-index: 1;
-  margin-right: -202px !important;
+  margin-right: -204px !important;
 }
 
 :root {
