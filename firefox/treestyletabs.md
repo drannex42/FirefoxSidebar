@@ -2,8 +2,7 @@
 
 This is a recreation (and better) version of my pseudo-popular Vivaldi vertical tab integration, for tree style tabs in firefox. 
 
-```
-/* Hide .twisty and adjust margins so favicons have 7px on left. */
+```/* Hide .twisty and adjust margins so favicons have 7px on left. */
 .tab .twisty {
 	visibility: hidden;
 	margin-left: -8px;
@@ -31,7 +30,8 @@ tab-item:hover {
 }
 
 .tab, .tabs, body, #background {
-  background: #F5F6F7; /* #F5F6F7; */
+   /* #F5F6F7; */
+  background: transparent;
 }
 
 
@@ -54,7 +54,7 @@ tab-item {
   box-shadow: none !important;
   border-radius: 5px;
   padding: 5px !important;
-  margin: 11px !Important;
+  margin: 7.5px 11px !Important;
   text-align: center;
 }
 .tab .label {
@@ -93,13 +93,12 @@ tab-item.active {
 }
 
 .after-tabs button {
-border: none;
-    border-top-color: currentcolor;
-    border-top-style: none;
-    border-top-width: medium;
-box-shadow: none;
-border-top: 1px solid var(--in-content-border-color);
-padding: 10px;
+  border: none;
+  box-shadow: none;
+  padding: 5px;
+  margin: 11px;
+  text-align: left;
+  background: none;
 }
 
 .after-tabs button:hover {
@@ -152,5 +151,38 @@ padding: 10px;
   text-align: right;
   margin-right: -15px !important;
   opacity: 0.65;
+}
+
+
+.newtab-button {
+  /*! text-align: left; */
+  /*! margin: 8px !important; */
+}
+
+.newtab-button::after {
+  content: "New Tab";
+  font-size: 13px;
+  padding-left: 10px;
+  margin-top: 0px;
+  position: absolute;
+  opacity: 0.85;
+  display: none;
+}
+
+.after-tabs {
+  border-top: 1px solid var(--in-content-border-color);
+}
+
+#tabbar-container:hover .newtab-button::after {
+  display: inline-block;
+}
+
+
+#tabbar-container {
+  background: var(--theme-colors-toolbar);
+}
+
+.newtab-button::before {
+    padding-left: 1.5px;
 }
 ```
