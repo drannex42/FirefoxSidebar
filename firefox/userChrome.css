@@ -7,41 +7,60 @@
 }
 
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
-  display: none;
+  /*! display: none; */
 }
 
 /*Collapse in default state and add transition*/
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
-    overflow: hidden;
+#sidebar-box #sidebar:hover { 
+    /*! overflow: visible !important; */
     min-width: 40px;
     max-width: 40px;
     border-right: 1px solid var(--panel-separator-color);
     z-index: 2;
+    --sidebar-background-color: #f5f6f7 !important;
 }
 
 /*Expand to 260px on hover*/
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar {
+#sidebar-box:hover { 
   min-width: 260px !important;
   max-width: 260px !important;
   z-index: 1;
   margin-right: -210px !important;
 }
 
+#sidebar-header {
+  border: none !important;
+}
+
+#sidebar-close, #sidebar-title, #sidebar-switcher-arrow {
+    display: none;
+    border: none;
+  }
+
+#sidebar-switcher-target {
+    border: none !important;
+    margin-left: 4.5px !important;
+}
+
+#sidebar-switcher-target:focus-visible:not(:hover, [open]), #sidebar-close:focus-visible:not(:hover, [open]) {
+  outline: none !important;
+}
+
+
 :root {
   --sidebar-width: 50px;
   --toolbar-height: -50px;
-  --menubar-height: -75px;
+  --menubar-height: -65px;
   --toolmenubar-height: -80px;
   --sidebar-padding: calc(var(--sidebar-width) + 5px);
 }
 
 
 #main-window #PersonalToolbar {
-    margin-left: var(--sidebar-width);
-    padding: 2px 5px;
-    padding-top: 0px;
-    margin-top: -1px;
+  margin-left: var(--sidebar-width);
+  padding: 2px 5px !important;
+  padding-top: 0px !important;
+  margin-top: -1.25px !important;
 }
 
 /* lock sidebar to height by doing the inverse margin of the toolbar element */
@@ -50,6 +69,7 @@
   position: relative!important;
   margin-top: var(--menubar-height) !important;
   border-right: 1px solid #ccc;
+  background: #f6f7f8 !important;
 }
 
 #main-window[title^="Firefox Developer Edition"] #sidebar-box {
@@ -57,14 +77,15 @@
 }
 
 /* lock sidebar to specified width */
-#sidebar-box, #sidebar-box #sidebar {
+#sidebar-box
     min-width: var(--sidebar-width) !important;
     max-width: var(--sidebar-width) !important;
+    overflow: hidden !important;
 }
 
 /* hide sidebar header for tree style tabs sidebar */
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
-  display: none;
+  /*! display: none; */
 }
 
 /* Hide the title bar */
@@ -73,7 +94,7 @@
 /* hide normal horizontal tab bar */
 #TabsToolbar { visibility: collapse; }
 
-#sidebar { border-right: 1px solid #ccc; }
+#sidebar { border-right: 1px solid #ccc; overflow: hidden;width: 50px !important;min-width: 50px !important;width: 100% !important;}
 
 toolbar#nav-bar {
   padding-top: 12px;
@@ -148,7 +169,8 @@ toolbar#nav-bar {
 
 .bookmark-item[container] {
     list-style-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMi4zNTcxNyAzLjM2MDc1QzIuMTMzMjMgMy41ODY5MyAyLjAwNTE1IDMuODkyMjEgMiA0LjIxMjAzVjExLjc4NzJDMS45OTQ0MSAxMS45NDc5IDIuMDIxNjMgMTIuMTA4MSAyLjA3OTk2IDEyLjI1NzdDMi4xMzgyOCAxMi40MDczIDIuMjI2NDggMTIuNTQzMSAyLjMzOTA0IDEyLjY1NjhDMi40NTE2IDEyLjc3MDUgMi41ODYxMyAxMi44NTk2IDIuNzM0MjUgMTIuOTE4NUMyLjg4MjM3IDEyLjk3NzQgMy4wNDA5MSAxMy4wMDQ5IDMuMiAxMi45OTkzSDEyLjhDMTMuMTE2NyAxMi45OTQxIDEzLjQxODkgMTIuODY0NyAxMy42NDI4IDEyLjYzODVDMTMuODY2OCAxMi40MTIzIDEzLjk5NDggMTIuMTA3MSAxNCAxMS43ODcyTDE0IDZDMTQgNS41IDEzLjUgNSAxMyA1SDhMNi44IDNIMy4yQzIuODgzMzQgMy4wMDUyIDIuNTgxMSAzLjEzNDU3IDIuMzU3MTcgMy4zNjA3NVpNMi45OTkzOSAxMS44MjJMMyAxMS44MDQ2VjQuMjIzMThDMy4wMDIyMyA0LjE2MTcxIDMuMDI3NDEgNC4xMDUxMSAzLjA2Nzc5IDQuMDY0MzJDMy4xMDc3MyA0LjAyMzk4IDMuMTU5MjkgNC4wMDIwOCAzLjIxMTYxIDRINi4yNDU4OUw3LjUgNkgxMi44QzEyLjkxMDUgNiAxMyA2LjA4Nzk2IDEzIDYuMTk4NDJDMTMgNy4xMzEwNyAxMyAxMS4wNjM2IDEzIDExLjc3NjFDMTIuOTk3OCAxMS44Mzc2IDEyLjk3MjYgMTEuODk0MiAxMi45MzIyIDExLjkzNUMxMi44OTIzIDExLjk3NTMgMTIuODQwNyAxMS45OTcyIDEyLjc4ODQgMTEuOTk5M0gzLjE4MjI3TDMuMTY0NTUgMTEuOTk5OUMzLjE0NDA2IDEyLjAwMDYgMy4xMjM0MyAxMS45OTcxIDMuMTAzODMgMTEuOTg5M0MzLjA4NDIxIDExLjk4MTUgMy4wNjU2NyAxMS45Njk0IDMuMDQ5NjYgMTEuOTUzM0MzLjAzMzY0IDExLjkzNzEgMy4wMjA1MSAxMS45MTcxIDMuMDExNjUgMTEuODk0NEMzLjAwMjc4IDExLjg3MTcgMi45OTg1MyAxMS44NDcgMi45OTkzOSAxMS44MjJaIj48L3BhdGg+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMi45OTkzOSAxMS44MjJMMyAxMS44MDQ2VjQuMjIzMThDMy4wMDIyMyA0LjE2MTcxIDMuMDI3NDEgNC4xMDUxMSAzLjA2Nzc5IDQuMDY0MzJDMy4xMDc3MyA0LjAyMzk4IDMuMTU5MjkgNC4wMDIwOCAzLjIxMTYxIDRINi4yNDU4OUw3LjUgNkgxMi44QzEyLjkxMDUgNiAxMyA2LjA4Nzk2IDEzIDYuMTk4NDJDMTMgNy4xMzEwNyAxMyAxMS4wNjM2IDEzIDExLjc3NjFDMTIuOTk3OCAxMS44Mzc2IDEyLjk3MjYgMTEuODk0MiAxMi45MzIyIDExLjkzNUMxMi44OTIzIDExLjk3NTMgMTIuODQwNyAxMS45OTcyIDEyLjc4ODQgMTEuOTk5M0gzLjE4MjI3TDMuMTY0NTUgMTEuOTk5OUMzLjE0NDA2IDEyLjAwMDYgMy4xMjM0MyAxMS45OTcxIDMuMTAzODMgMTEuOTg5M0MzLjA4NDIxIDExLjk4MTUgMy4wNjU2NyAxMS45Njk0IDMuMDQ5NjcgMTEuOTUzM0MzLjAzMzY0IDExLjkzNzEgMy4wMjA1MSAxMS45MTcxIDMuMDExNjUgMTEuODk0NEMzLjAwMjc4IDExLjg3MTcgMi45OTg1MyAxMS44NDcgMi45OTkzOSAxMS44MjJaIiBmaWxsLW9wYWNpdHk9IjAuMSI+PC9wYXRoPgo8L3N2Zz4=") !important;
-  margin-right: 8px !important;
+    padding-right: 15px !important;
+    margin-right: -1px !important;
   }
 
 
@@ -160,4 +182,14 @@ toolbar#nav-bar {
     display: inline-block;
     position: absolute;
     top: 4px;
+}
+
+#sidebarMenu-popup .subviewbutton {
+    min-width: 0px;
+    padding: 0;
+    margin: 0 !Important;
+}
+
+toolbarseparator {
+    display: none;
 }
