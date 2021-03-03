@@ -2,8 +2,8 @@
   Title: Drannex42's Personal userChrome.css for Firefox
   Description: This is my personal userChrome for Firefox, I specifically clean up the interface, change the folder icon to Vivaldi's (much better) and reduce padding in some areas, and add some in others. This overall creates a much more streamlined interface.
   Features: Streamlines interface, folder icon replacement, works best with my custom Tree Style Tabs interface (check it out! treestyletabs.css in the /firefox/ directory), removes tab bar.
-
 */
+
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
   opacity: 0;
   pointer-events: none;
@@ -31,7 +31,7 @@
   min-width: 350px !important;
   max-width: 350px !important;
   z-index: 1;
-  margin-right: -210px !important;
+  margin-right: -300px !important;
 }
 
 /*Tree Style Tab specific size*/
