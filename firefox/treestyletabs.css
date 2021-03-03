@@ -1,8 +1,11 @@
 /* 
 	Title: Edge-Like (Better) Tree Style Tabs
-	Description: This is a recreation (and better) version of my pseudo-popular Vivaldi vertical tab integration, for tree style tabs in firefox. 
+	Description: This is a recreation (and better) version of my pseudo-popular Vivaldi vertical tab integration, for tree style tabs in firefox. This is probably the best Tree Style Tabs interface out there.
+	Author: @Drannex42 (https://github.com/drannex42/linux-utils - https://macleodsawyer.com)
+	Notes: This works best with my custom userChrome.css file in the /firefox/ folder - Lots of very cool features built in.
 	
 */
+
 /* Hide .twisty and adjust margins so favicons have 7px on left. */
 .tab .twisty {
 	visibility: hidden;
@@ -10,20 +13,19 @@
   display: none;
 }
 
-tab-item:hover {
-  background:    var(--in-content-box-background-hover) !important;
-  opacity: 1;
-}
-
-
 /* Push tab labels slightly to the right so they're completely hidden in collapsed state */
 .tab .label {
-	font-size: 16px;
-  	padding-left: 5px
+	font-size: 13px;
+  	padding-left: 7.5px;
 }
 
 .tab:not(:hover) > .closebox {
   display: none;
+}
+
+tab-item:hover {
+  background:    var(--in-content-box-background-hover) !important;
+  opacity: 1;
 }
 
 .closebox:hover {
@@ -43,6 +45,8 @@ tab-item:hover {
   --svg-small-icon-size: var(--favicon-size);
   /*! text-align: center; */
   margin-left: .5px;
+  display: inline;
+  vertical-align: middle;
 }
 tab-item {
   border: 1px solid transparent !important;
@@ -50,20 +54,19 @@ tab-item {
   position: relative !important;
   font-size: 13px;
   background: none !important;
-  overflow: visible !important;
-  text-align: center;
   box-shadow: none !important;
   border-radius: 5px;
   padding: 5px !important;
   margin: 7.5px 10px !Important;
-  text-align: center;
+  transition: 0 !Important;
+  text-align: left !important;
+  transition: width 0.1s !Important;
 }
-.tab .label {
-  font-size: 13px !important;
-}
-#tabbar-container:not(:hover) {
+
+#tabbar-container{
   /*! width: 50px; */
   /*! margin: 2px; */
+  transition: none;
 }
 
 
@@ -83,13 +86,11 @@ tab-item:not(.faviconized) .contextual-identity-marker {
   margin-top: -5px;
 }
 
-#tabbar:hover {
-  max-width: 100%;
-}
-#tabbar:not(:hover) tab-item {
-  width: 100%;
-  width: 30px;
+
+#tabbar tab-item {
   text-align: center;
+  /*! width: 100%; */
+  overflow: hidden !Important;
 }
 tab-item:not(:hover) {
 }
@@ -121,35 +122,38 @@ tab-item.active {
     border-radius: 5px;
 }
 
-#tabbar:hover [data-level="1"] {
+  #tabbar [data-level] {
+}
+
+#tabbar [data-level="1"] {
     margin-left: 20px !important;
 }
 
-#tabbar:hover [data-level="2"] {
+#tabbar [data-level="2"] {
     margin-left: 30px !important;
 }
 
-#tabbar:hover [data-level="3"] {
+#tabbar [data-level="3"] {
     margin-left: 40px !important;
 }
 
-#tabbar:hover [data-level="4"] {
+#tabbar [data-level="4"] {
     margin-left: 50px !important;
 }
 
-#tabbar:hover [data-level="5"] {
+#tabbar [data-level="5"] {
     margin-left: 60px !important;
 }
 
-#tabbar:hover [data-level="6"] {
+#tabbar [data-level="6"] {
     margin-left: 70px !important;
 }
 
-#tabbar:hover [data-level="7"] {
+#tabbar [data-level="7"] {
     margin-left: 80px !important;
 }
 
-#tabbar:hover [data-level="8"] {
+#tabbar [data-level="8"] {
     margin-left: 90px !important;
 }
 
@@ -179,8 +183,8 @@ tab-item.active {
 .newtab-button::after {
   content: "New Tab";
   font-size: 13px;
-  padding-left: 10px;
-  margin-top: 0px;
+  padding-left: 12px;
+  margin-top: -2px;
   position: absolute;
   opacity: 0.85;
   display: none;
@@ -191,7 +195,7 @@ tab-item.active {
   margin-top: 6px;
 }
 
-#tabbar-container:hover .newtab-button::after {
+#tabbar-container .newtab-button::after {
   display: inline-block;
 }
 
@@ -202,4 +206,28 @@ tab-item.active {
 
 .newtab-button::before {
     padding-left: 1.5px;
+}
+
+@media screen and (max-width: 51px) {
+  tab-item {
+    max-width: 30px !important;
+  }
+  
+
+  #tabbar [data-level] {
+      margin-left: auto !important;
+  }
+  
+  #tabbar {
+    max-width: 100%;
+  }
+  
+ .tab > .closebox {
+  display: none;
+}
+  
+  #tabbar-container .newtab-button::after {
+  display: none;
+}
+  
 }
