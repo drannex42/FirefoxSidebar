@@ -3,6 +3,7 @@
 	Description: This is a recreation (and better) version of my pseudo-popular Vivaldi vertical tab integration, for tree style tabs in firefox. This is probably the best Tree Style Tabs interface out there.
 	Author: @Drannex42 (https://github.com/drannex42/linux-utils - https://macleodsawyer.com)
 	Notes: This works best with my custom userChrome.css file in the /firefox/ folder - Lots of very cool features built in.
+	Version: 12020.03.05
 	
 */
 
@@ -83,7 +84,7 @@ tab-item:not(.faviconized) .contextual-identity-marker {
 :root.left #tabbar {
   box-shadow: none !important;
   border: none !important;
-  margin-top: -5px;
+  margin-top: -5px !important;
 }
 
 
@@ -101,6 +102,10 @@ tab-item .label, tab-item .highlighter, tab-item .contextual-identity-marker, ta
 tab-item.active {
   background-color: var(--in-content-box-background) !important;
   box-shadow: 0px 5px 10px var(--in-content-box-background-active) !important;
+}
+
+tab.item.collapsed {
+  display: none !important;
 }
 
 :root .tab .highlighter::before {
@@ -207,6 +212,18 @@ tab-item.active {
 .newtab-button::before {
     padding-left: 1.5px;
 }
+
+
+tab-item.pinned {
+  --pinned-position-top: 0px !important;
+  --pinned-position-bottom: none !Important;
+  top: auto !Important;
+  bottom: auto !Important;
+  margin: none !Important;
+  left: initial !important;
+  right: initial !Important;
+}
+
 
 @media screen and (max-width: 51px) {
   tab-item {
