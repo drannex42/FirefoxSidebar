@@ -3,7 +3,7 @@
 	Description: This is a recreation (and better) version of my pseudo-popular Vivaldi vertical tab integration, for tree style tabs in firefox. This is probably the best Tree Style Tabs interface out there.
 	Author: @Drannex42 (https://github.com/drannex42/linux-utils - https://macleodsawyer.com)
 	Notes: This works best with my custom userChrome.css file in the /firefox/ folder - Lots of very cool features built in.
-	Version: 12020.03.05
+  	Version: 12020.03.06
 	
 */
 
@@ -104,8 +104,9 @@ tab-item.active {
   box-shadow: 0px 5px 10px var(--in-content-box-background-active) !important;
 }
 
-tab.item.collapsed {
-  display: none !important;
+tab-item:not(.pinned).collapsed.collapsed-completely {
+    visibility: collapse;
+    display: none !important;
 }
 
 :root .tab .highlighter::before {
