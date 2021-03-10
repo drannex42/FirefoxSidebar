@@ -1,4 +1,4 @@
-# Firefox Utils / Edge-like Vertcal Tabs (but better!)
+# Firefox Utils / Edge-like Vertical Tabs (but better!)
 
 Video of the extension in action: [https://i.imgur.com/HaLvkFc.mp4](https://i.imgur.com/HaLvkFc.mp4)
 
