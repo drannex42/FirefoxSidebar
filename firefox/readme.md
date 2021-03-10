@@ -21,4 +21,4 @@ Then the sidebar switcher will be missing, you need to add this to your userChro
 
 ## Other Considerations
 
-If you dislike some of my my other changes to FF (added vivaldi's firefox icon, removed the superbox, cleaned up the borders, removed the titlebar) then remove everything below CUSTOM MODIFICATIONS in userChrome.css
+If you dislike some of my my other changes to FF (added vivaldi's folder icon, removed the superbox, cleaned up the borders, removed the titlebar) then remove everything below CUSTOM MODIFICATIONS in userChrome.css
