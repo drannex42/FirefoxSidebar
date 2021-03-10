@@ -10,7 +10,7 @@ Then the sidebar switcher will be missing, you need to add this to your userChro
 
 ```
 #sidebar-box {
-  --menubar-height: -40px;
+  --menubar-height: -40px !important;
 }
 ```
 
