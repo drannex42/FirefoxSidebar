@@ -1,7 +1,7 @@
 # LibreOffice Macros
 
 ## Date Inserter with Header 
-This will automatically add a custom date format (DD.MM.1YYY HH:MM:sss) with the Header 1 style for quick and easy 'captain logs'. I use the H.E. ([Holocene calendar](https://en.wikipedia.org/wiki/Holocene_calendar)) time format that believes theat humanity started 12,000 years ago with the advent of agriculture. Also, because I am a major [Foundation](https://sandyuraz.com/articles/foundation-time/) by Isaac Asimov nerd. 
+This will automatically add a custom date format (DD.MM.1YYYY [T::HH:MM:sss]) with the Header 1 style for quick and easy 'captain logs'. I use the H.E. ([Holocene calendar](https://en.wikipedia.org/wiki/Holocene_calendar)) time format that believes theat humanity started 12,000 years ago with the advent of agriculture. Also, because I am a major [Foundation](https://sandyuraz.com/articles/foundation-time/) by Isaac Asimov nerd. 
 
 
 
@@ -77,7 +77,7 @@ args2(5).Name = "Separator"
 args2(5).Value = " "
 
 dim sText as string
-sText = Format( Now, "DD.MM.1YYYY HH\:mm\:ss")
+sText = Format( Now, "DD.MM.1YYYY [T::HH\:mm\:ss]")
 
 dim textFormatat(0) as new com.sun.star.beans.PropertyValue
 textFormatat(0).Name = "Text"
