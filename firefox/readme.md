@@ -2,7 +2,7 @@
 
 Video of the extension in action: [https://i.imgur.com/HaLvkFc.mp4](https://i.imgur.com/HaLvkFc.mp4)
 
-To use my custom TST addons you will need to copy the userChrome.css to your firefox profile, add the treestyletabs.css to your TST addon preferences or just add the treestyletabs.json preferences to your TST addon.
+To use my custom TST addons you will need to copy the userChrome.css to your firefox profile, and either add the treestyletabs.css to your TST addon preferences or import the treestyletabs-\*.json preferences to your TST addon (_prefered_)
 
 ## If you use FF without the bookmarks bar
 
