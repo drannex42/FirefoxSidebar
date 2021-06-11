@@ -1,6 +1,6 @@
 # Android Development Utils
 
-## Grade Sync failed
+## Gradle Sync failed
 
 This was a nightmare to figure out, especially because all the error message said was ``Grade sync failed: reason unknown``, so whoever got to write that error message, I am coming for you. 
 
