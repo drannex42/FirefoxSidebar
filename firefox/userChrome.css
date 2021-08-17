@@ -2,7 +2,7 @@
   Title: Drannex42's Personal userChrome.css for Firefox
   Description: This is my personal userChrome for Firefox, I specifically clean up the interface, change the folder icon to Vivaldi's (much better) and reduce padding in some areas, and add some in others. This overall creates a much more streamlined interface.
   Features: Streamlines interface, folder icon replacement, works best with my custom Tree Style Tabs interface (check it out! treestyletabs.css in the /firefox/ directory), removes tab bar.
-  Version: 12021.06.14 :: Added Sideberry support.
+  Version: 12021.08.17 :: Fixed folder drop down arrow position after latest FF changed padding. 
 */
 
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
@@ -24,7 +24,7 @@
     max-width: 40px;
     border-right: 1px solid var(--panel-separator-color);
     z-index: 2;
-    --sidebar-background-color: #f5f6f7 !important;
+    --sidebar-background-color: #fafafa !important;
 }
 
 /*All other sidebar-boxes should be larger on hover*/
@@ -35,7 +35,7 @@
   margin-right: -300px !important;
 }
 
-/*Tree Style Tab specific size*/
+/*Tree Style Tabb && Sideberry specific sidebar width and size*/
 
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
@@ -48,6 +48,7 @@
 
 #sidebar-header {
   border: none !important;
+  background: var(--sidebar-background-color) !important;
 }
 
 #sidebar-close, #sidebar-title, #sidebar-switcher-arrow {
@@ -221,12 +222,12 @@ toolbarseparator {
 /* Add down arrow to folders on the bookmark bar */
 .bookmark-item[container]::after {
   content: "ˇ";
-  opacity: 0.65;
-  padding-left: 3px;
-  font-size: 22px;
+  opacity: 0.55;
+  padding-left: 3.5px;
+  font-size: 23px;
   display: inline-block;
   position: absolute;
-  top: 5.5px;
+  top: 6.9px;
 }
 
 /* Change the Avatar size for the Firefox Account to what makes sense */
