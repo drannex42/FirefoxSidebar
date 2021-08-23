@@ -174,7 +174,7 @@ toolbarseparator {
 /*/* --- Reduce row paddings to make them more compact */
 .urlbarView-row {
     padding: 2px 0px !important;
-    line-height: 1.2em !imortant;
+    line-height: 1.2em !important;
     margin: -1px;
     margin-bottom:0px;
 }
