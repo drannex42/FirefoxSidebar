@@ -2,7 +2,7 @@
   Title: Drannex42's Personal userChrome.css for Firefox
   Description: This is my personal userChrome for Firefox, I specifically clean up the interface, change the folder icon to Vivaldi's (much better) and reduce padding in some areas, and add some in others. This overall creates a much more streamlined interface.
   Features: Streamlines interface, folder icon replacement, works best with my custom Tree Style Tabs interface (check it out! treestyletabs.css in the /firefox/ directory), removes tab bar.
-  Version: 12021.08.17 :: Fixed folder drop down arrow position after latest FF changed padding. 
+  Version: 12021.09.07 :: Fixed sidebar margin at top. Make sure you update Sideberry to include proper alignment. 
 */
 
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
@@ -69,7 +69,7 @@
 :root {
   --sidebar-width: 50px;
   --toolbar-height: -50px;
-  --menubar-height: -65px;
+  --menubar-height: -68px;
   --toolmenubar-height: -80px;
   --sidebar-padding: calc(var(--sidebar-width) + 5px);
   --toolbar-start-end-padding: 5px !important;
@@ -88,7 +88,7 @@
 /* lock sidebar to height by doing the inverse margin of the toolbar element */
 #sidebar-box {
   z-index: 1000 !important;
-  position: relative!important;
+  position: relative !important;
   margin-top: var(--menubar-height) !important;
   border-right: 1px solid #ccc;
   background: #f6f7f8 !important;
