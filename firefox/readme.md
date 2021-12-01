@@ -8,7 +8,7 @@ Features:
 
 ## Updates
 
-**12021.12.01 :: Sideberry is the preferred method, and has been since June. I will not be updating the TST extension moving forward. Sideberry is better in nearly every regard to memory usage, responsiveness, speed, and useability. **
+**12021.12.01 :: Sideberry is the preferred method, and has been since June. I will not be updating the TST extension moving forward. Sideberry is better in nearly every regard to memory usage, responsiveness, speed, and useability.**
 
 12021.06.14 :: I have added Sideberry support, sideberry is faster, more responsive, and far easier to customize. I may keep going forward with this version. 
 
