@@ -8,19 +8,17 @@ Features:
 
 ## Updates
 
-12021.06.14: I have added Sideberry support, sideberry is faster, more responsive, and far easier to customize. I may keep going forward with this version. 
+**12021.12.01 :: Sideberry is the preferred method, and has been since June. I will not be updating the TST extension moving forward. Sideberry is better in nearly every regard to memory usage, responsiveness, speed, and useability. **
+
+12021.06.14 :: I have added Sideberry support, sideberry is faster, more responsive, and far easier to customize. I may keep going forward with this version. 
 
 ## How to use
 
-To use my custom styles you will need to copy the userChrome.css to your firefox profile and then follow the Sideberry or TST sections below.
+To use my custom styles you will need to copy the userChrome.css to your firefox profile and then follow the Sideberry section below.
 
 ## Sideberry
 
 Add the sideberry-data-*.json file to your Sideberry addon by using the 'import' section under 'Help'. 
-
-## TreeStyleTabs
-
-Either add the treestyletabs.css to your TST addon preferences or import the treestyletabs-\*.json preferences to your TST addon (_prefered_)
 
 ## If you use FF without the bookmarks bar
 
@@ -37,3 +35,8 @@ Warning: TST support may be ending as I continue to test the Sideberry addon.
 ## Other Considerations
 
 If you dislike some of my my other changes to FF (added vivaldi's folder icon, removed the superbox, cleaned up the borders, removed the titlebar) then remove everything below CUSTOM MODIFICATIONS in userChrome.css
+
+
+## TreeStyleTabs (Legacy)
+
+Either add the treestyletabs.css to your TST addon preferences or import the treestyletabs-\*.json preferences to your TST addon (_prefered_)
