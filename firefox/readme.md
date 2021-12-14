@@ -22,6 +22,27 @@ To use my custom styles you will need to copy the userChrome.css to your firefox
 
 Add the sideberry-data-*.json file to your Sideberry addon by using the 'import' section under 'Help'. 
 
+The default is for light themes, if you have a particular color scheme in mind navigate to Sideberry Settings > Style Editor (found at the end of the settings sidebar). 
+
+To change the color: 
+
+**--tabs-font** :: Changes the default font (uses system font by default) to change the font size. 
+- I recommend changing it via Sideberry Settings > Appearance > Font Size
+- default: 1rem -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+**--tabs-fg** :: Changes the tabs text color 
+- default: #000
+
+**--tabs-bg-hover** :: Changes the hover background color for tabs 
+- default: #dedddaff
+
+**--tabs-activated-bg** :: This is the active tab background color 
+- default: #fff
+
+**--tabs-activated-shadow** :: Changes the active tabs shadow color 
+- default: rgba(0,0,0,0.15);
+
+
 ## If you use FF without the bookmarks bar
 
 Then the sidebar switcher will be missing, you need to add this to your userChrome.css
