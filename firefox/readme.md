@@ -8,6 +8,9 @@ Features:
 
 ## Updates
 
+**v12021.12.22**
+- Sideberry :: Fixed drop down arrows when tab groups are folded. (Thanks [@bpoteryko](https://github.com/drannex42/linux-utils/issues/8)!)
+
 **v12021.12.14** 
 - Sideberry :: updated to use configs for easier theming, fixed font rendering, and fixed font sizing.
 - userChrome.css :: Fixed sidebar header position and background color.
