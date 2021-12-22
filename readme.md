@@ -17,6 +17,8 @@ Video of the extension in action: [https://i.imgur.com/HaLvkFc.mp4](https://i.im
 
 **v12021.12.22**
 - Sideberry :: Fixed drop down arrows when tab groups are folded. (Thanks [@bpoteryko](https://github.com/drannex42/linux-utils/issues/8)!)
+- userChrome.css :: You can now easily change the header background color using --sidebar-bg-color at the top of the tile. 
+- readme.md :: Added tutorial to adding a userChrome.css file 
 
 **v12021.12.14** 
 - Sideberry :: updated to use configs for easier theming, fixed font rendering, and fixed font sizing.
@@ -28,11 +30,11 @@ Video of the extension in action: [https://i.imgur.com/HaLvkFc.mp4](https://i.im
 **12021.06.14**
 - I have added Sideberry support, sideberry is faster, more responsive, and far easier to customize. I may keep going forward with this version. 
 
-## How to use
+# How to use
 
-To use my custom styles you will need to copy the userChrome.css to your firefox profile and then follow the Sideberry section below.
+To use my custom styles you will need to copy the userChrome.css to your firefox profile and then follow the Sideberry section below. Both are outlined below in how to do so. 
 
-## Sideberry
+## 1. Sideberry
 
 Add the sideberry-data-*.json file to your Sideberry addon by using the 'import' section under 'Help'. 
 
@@ -56,8 +58,27 @@ To change the color:
 **--tabs-activated-shadow** :: Changes the active tabs shadow color 
 - default: rgba(0,0,0,0.15);
 
+## 2. userChrome.css 
 
-## If you use FF without the bookmarks bar
+Follow the instructions for adding a userChrome.css file to your Firefox Profile.
+
+- Navigate to `[about:profiles]` in your address bar
+- Click on the 'rot folder` button for your current profile 
+- Create a 'chrome' folder (all lowercase)
+- Add the userChrome.css file to that folder
+- In firefox navigate to `[about:config]` in your address bar
+- change the characteristic `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` 
+- Restart Firefox
+- Visit [userchrome.org](https://www.userchrome.org/how-create-userchrome-css.html) if you are confused or have any questions. 
+
+Values: 
+
+ **--sidebar-bg-color**
+ - Change this if you have a different theme than the default light one to match the rest of your sideberry theme colors 
+ - default: #fafafa;
+
+
+### If you use FF without the bookmarks bar
 
 Then the sidebar switcher will be missing, you need to add this to your userChrome.css
 
