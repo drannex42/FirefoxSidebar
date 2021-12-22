@@ -63,7 +63,7 @@ To change the color:
 Follow the instructions for adding a userChrome.css file to your Firefox Profile.
 
 - Navigate to `[about:profiles]` in your address bar
-- Click on the 'rot folder` button for your current profile 
+- Click on the 'open root folder` button for your current profile 
 - Create a 'chrome' folder (all lowercase)
 - Add the userChrome.css file to that folder
 - In firefox navigate to `[about:config]` in your address bar
