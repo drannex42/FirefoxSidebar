@@ -1,10 +1,17 @@
-# Firefox Utils / Edge-like Vertical Tabs (but better!)
+# Firefox Sidebar / Edge-like Vertical Tabs (but better!)
 
+**Note:** This repo was originally a subdirectory of [drannex42/linux-utils](https://github.com/drannex42//linux-utils/), but has now become a standalone repo for my Firefox Sidebar CSS and Utilities. The original linux-utils files can be found [here](https://github.com/drannex42/utils). 
+
+## Example
 Video of the extension in action: [https://i.imgur.com/HaLvkFc.mp4](https://i.imgur.com/HaLvkFc.mp4)
 
-Features: 
-  - Edge-like Vertical tab design 
-  - Dynamic Indentation (for tree style)
+## Features: 
+  - Edge-like vertical tab design 
+  - Dynamic Indentation (for tree style tabs)
+  - Custom theme configuration using Sideberry 
+  - Support for tab groups 
+  - Support for Tab Containers with visual identification
+  - Pinned tabs (right click to close) 
 
 ## Updates
 
