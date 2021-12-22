@@ -17,7 +17,7 @@ Video of the extension in action: [https://i.imgur.com/HaLvkFc.mp4](https://i.im
 
 **v12021.12.22**
 - Sideberry :: Fixed drop down arrows when tab groups are folded. (Thanks [@bpoteryko](https://github.com/drannex42/linux-utils/issues/8)!)
-- userChrome.css :: You can now easily change the header background color using --sidebar-bg-color at the top of the tile. 
+- userChrome.css :: You can now easily change the header background color using --sidebar-bg-color at the top of the file. 
 - readme.md :: Added tutorial to adding a userChrome.css file 
 
 **v12021.12.14** 
