@@ -7,7 +7,7 @@ Video of the extension in action: [https://i.imgur.com/HaLvkFc.mp4](https://i.im
 
 ## Features: 
   - Edge-like vertical tab design 
-  - Dynamic Indentation (for tree style tabs)
+  - Dynamic Indentation
   - Custom theme configuration using Sideberry 
   - Support for tab groups 
   - Support for Tab Containers with visual identification
