@@ -15,20 +15,7 @@ Video of the extension in action: [https://i.imgur.com/HaLvkFc.mp4](https://i.im
 
 ## Updates
 
-**v12021.12.22**
-- Sideberry :: Fixed drop down arrows when tab groups are folded. (Thanks [@bpoteryko](https://github.com/drannex42/linux-utils/issues/8)!)
-- userChrome.css :: You can now easily change the header background color using --sidebar-bg-color at the top of the file. 
-- readme.md :: Added tutorial to adding a userChrome.css file 
-
-**v12021.12.14** 
-- Sideberry :: updated to use configs for easier theming, fixed font rendering, and fixed font sizing.
-- userChrome.css :: Fixed sidebar header position and background color.
-
-**12021.12.01**
-- Sideberry is the preferred method, and has been since June. I will not be updating the TST extension moving forward. Sideberry is better in nearly every regard to memory usage, responsiveness, speed, and useability.
-
-**12021.06.14**
-- I have added Sideberry support, sideberry is faster, more responsive, and far easier to customize. I may keep going forward with this version. 
+Release notes have migrated to [here](https://github.com/drannex42/FirefoxSidebar/releases). You can find prior release notes before v12021.12.22 [here](https://github.com/drannex42/FirefoxSidebar/releases/tag/v12021.12.22). 
 
 # How to use
 
