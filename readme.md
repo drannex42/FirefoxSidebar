@@ -9,6 +9,7 @@ Video of the extension in action: [https://i.imgur.com/HaLvkFc.mp4](https://i.im
   - Edge-like vertical tab design 
   - Tree style tab layout support (works with Sideberry & TST (legacy) version) 
   - Dynamic Indentation
+  - Automatic theme configuration for light and dark themes 
   - Custom theme configuration using Sideberry 
   - Support for tab groups 
   - Support for Tab Containers with visual identification
@@ -26,7 +27,7 @@ To use my custom styles you will need to copy the userChrome.css to your firefox
 
 Add the sideberry-data-*.json file to your Sideberry addon by using the 'import' section under 'Help'. 
 
-The default is for light themes, if you have a particular color scheme in mind navigate to Sideberry Settings > Style Editor (found at the end of the settings sidebar). 
+If you dislike any of the theme presets for dark or light themes, or you have a particular color scheme in mind then navigate to Sideberry Settings > Style Editor (found at the end of the settings sidebar). The preference is to replace the values in the right panel, not in the theme editor to the left - this way you can easily update to newer versions in the future.  
 
 To change the color: 
 
@@ -59,12 +60,6 @@ Follow the instructions for adding a userChrome.css file to your Firefox Profile
 - Restart Firefox
 - Visit [userchrome.org](https://www.userchrome.org/how-create-userchrome-css.html) if you are confused or have any questions. 
 
-Values: 
-
- **--sidebar-bg-color**
- - Change this if you have a different theme than the default light one to match the rest of your sideberry theme colors 
- - default: #fafafa;
-
 
 ### If you use FF without the bookmarks bar
 
@@ -75,8 +70,6 @@ Then the sidebar switcher will be missing, you need to add this to your userChro
   --menubar-height: -40px !important;
 }
 ```
-
-Warning: TST support may be ending as I continue to test the Sideberry addon. 
 
 ## Other Considerations
 
