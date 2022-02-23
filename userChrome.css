@@ -149,6 +149,7 @@ toolbarseparator {
 
 .browser-toolbar {
   padding-left: var(--sidebar-width) !important;
+ /* remove the following line if CSD/window controls should be moved to navigation bar */
   position: relative !important;
 }
 
@@ -249,3 +250,38 @@ toolbarseparator {
     scale: 1.175;
 }
 
+/* Client Side Decorations / Window Controls - please fine tune numbers and colors */
+/* reserve space for buttons */
+#nav-bar {
+  margin-right: 92px;
+  /* margin-left: 92px;*/ 
+}
+
+/* move buttons next to menu button */
+#TabsToolbar .titlebar-buttonbox-container {
+  visibility: visible !important;
+  position: absolute;
+  display: block;
+  top: 8px;
+  right: 0;
+  /* left: 50px; */
+}
+
+/* fix ugly background color */
+#navigator-toolbox {
+  background-color: #484d51 !important;
+}
+
+/* hide buttons in fullscreen mode (video player and F11) */
+#main-window[inFullscreen="true"] .titlebar-buttonbox-container,
+#main-window[inDOMFullscreen="true"] .titlebar-buttonbox-container {
+  /* display: none !important; */
+  visibility: hidden !important;
+}
+
+/* remove empty space when in fullscreen mode (F11) */
+#main-window[inFullscreen="true"] #nav-bar {
+  margin-right: 0px !important;{
+  /* margin-left: 0px !important; */
+}
+/* END Client Side Decorations / Window Controls */
