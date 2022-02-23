@@ -149,7 +149,6 @@ toolbarseparator {
 
 .browser-toolbar {
   padding-left: var(--sidebar-width) !important;
- /* remove the following line if CSD/window controls should be moved to navigation bar */
   position: relative !important;
 }
 
@@ -251,6 +250,11 @@ toolbarseparator {
 }
 
 /* Client Side Decorations / Window Controls - please fine tune numbers and colors */
+/* allow the buttons to appear */
+.browser-toolbar {
+  position: unset !important;
+}
+
 /* reserve space for buttons */
 #nav-bar {
   margin-right: 92px;
