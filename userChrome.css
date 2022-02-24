@@ -11,12 +11,12 @@
 */
   @import url('./prefs.css');
 
- /* Sidebar:: 
+ /* Sidebar :: 
     This file is for the sidebar implementation
 */
   @import url('./extensions/sidebar.css');
 
-/* Extensions
+/* Extensions ::
    To enable or disable specific extensions just comment/uncomment the line below 
 */
 
