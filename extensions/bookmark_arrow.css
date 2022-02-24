@@ -1,0 +1,19 @@
+/* 
+  Extension: Bookmark Arrow
+  Description: Adds an arrow next to the bookmark folder.
+*/
+
+.bookmark-item[container] {
+  margin-right: 10px !important;
+}
+
+/* Add down arrow to folders on the bookmark bar */
+.bookmark-item[container]::after {
+  content: "ˇ";
+  opacity: 0.55;
+  padding-left: 3.5px;
+  font-size: 23px;
+  display: inline-block;
+  position: absolute;
+  top: 6.9px;
+}

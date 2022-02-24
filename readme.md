@@ -14,6 +14,7 @@ Video of the extension in action: [https://i.imgur.com/HaLvkFc.mp4](https://i.im
   - Support for tab groups 
   - Support for Tab Containers with visual identification
   - Pinned tabs (right click to close) 
+  - Built in CSS Extension Management
 
 ## Updates
 
@@ -21,45 +22,51 @@ Release notes have migrated to [here](https://github.com/drannex42/FirefoxSideba
 
 # How to use
 
-To use my custom styles you will need to copy the userChrome.css to your firefox profile and then follow the Sideberry section below. Both are outlined below in how to do so. 
+To use FirefoxSidebar you will need to clone this repo into your firefox profile as the `chrome` folder and then follow the Sideberry section below. Both are outlined below in how to do so. 
 
-## 1. Sideberry
+## 1. userChrome.css 
 
-Add the sideberry-data-*.json file to your Sideberry addon by using the 'import' section under 'Help'. 
+Follow the instructions for adding this repository to your Firefox Profile.
+
+1. Navigate to `[about:profiles]` in your address bar
+2. Click on the 'open root folder` button for your current profile 
+3. Open this folder in your terminal
+4. Clone this repo with the following command:
+  - `git clone https://github.com/drannex42/FirefoxSidebar.git "chrome"
+5. In firefox navigate to `[about:config]` in your address bar
+6. change the characteristic `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` 
+7. Restart Firefox
+
+Visit [userchrome.org](https://www.userchrome.org/how-create-userchrome-css.html) if you are confused or have any questions. 
+
+## 2. Sideberry
+
+Load the `sideberry-data.json` file into your Sideberry addon by using the 'import' section under 'Help'. 
 
 If you dislike any of the theme presets for dark or light themes, or you have a particular color scheme in mind then navigate to Sideberry Settings > Style Editor (found at the end of the settings sidebar). The preference is to replace the values in the right panel, not in the theme editor to the left - this way you can easily update to newer versions in the future.  
 
-To change the color: 
+### Extensions
 
-**--tabs-font** :: Changes the default font (uses system font by default) to change the font size. 
-- I recommend changing it via Sideberry Settings > Appearance > Font Size
-- default: 1rem -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+All extensions can be found in `/extensions`. 
 
-**--tabs-fg** :: Changes the tabs text color 
-- default: #000
+In version 2022.02.23 we broke up the components into extensions using css imports. This makes adding and removing features incredibly easy. 
 
-**--tabs-bg-hover** :: Changes the hover background color for tabs 
-- default: #dedddaff
+**The following extensions are added:**
 
-**--tabs-activated-bg** :: This is the active tab background color 
-- default: #fff
+- [Window Controls / Client Side Decorations (CSD)](/extensions/window_controls.css) 
+  - This adds the window controls to be inline with your address bar.
+- [Superbox Removal](/extensions/superbox_removal.css) 
+  - This removes the superbox and fixes the address bar padding.
+- [Bookmark Arrows](/extensions/bookmark_arrow.css) 
+  - This adds a nice little arrow next to your bookmark folders.
 
-**--tabs-activated-shadow** :: Changes the active tabs shadow color 
-- default: rgba(0,0,0,0.15);
+## Preferences
 
-## 2. userChrome.css 
+There are a number of preferences you can enable or disable in the `prefs.css` file. There are examples and descriptions of the different preferences within that file.
 
-Follow the instructions for adding a userChrome.css file to your Firefox Profile.
+## Custom Extensions
 
-- Navigate to `[about:profiles]` in your address bar
-- Click on the 'open root folder` button for your current profile 
-- Create a 'chrome' folder (all lowercase)
-- Add the userChrome.css file to that folder
-- In firefox navigate to `[about:config]` in your address bar
-- change the characteristic `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` 
-- Restart Firefox
-- Visit [userchrome.org](https://www.userchrome.org/how-create-userchrome-css.html) if you are confused or have any questions. 
-
+For ease of use I suggest using the `custom.css` file to for your personal tweaks. 
 
 ### If you use FF without the bookmarks bar
 
@@ -67,7 +74,7 @@ Then the sidebar switcher will be missing, you need to add this to your userChro
 
 ```
 #sidebar-box {
-  --menubar-height: -40px !important;
+  --menubar-height: -42px !important;
 }
 ```
 
