@@ -1,0 +1,49 @@
+/* 
+  Extension: Window Controls / Client Side Decorations (CSD)
+  Description: This brings the window controls into the main bar (where the address bar exists). Please see the prefs.css folder for switching the sides from left to right. 
+  Repository URL: https://github.com/drannex42/FirefoxSidebar
+  Contributors: Mr-nUUb, Xanaxus, Drannex42
+  Issue URL: https://github.com/drannex42/FirefoxSidebar/issues/14
+*/
+
+/* allow the buttons to appear */
+.browser-toolbar {
+  position: unset !important;
+}
+
+/* reserve space for buttons */
+#nav-bar {
+  padding-right: var(--csd-margin-right, 10px) !important;  /* The addition of the "10px" is so that there will be an area where you can grab and move the window */ 
+  margin-left: var(--csd-margin-left) !important;
+}
+
+/* move buttons next to menu button */
+.titlebar-buttonbox-container {
+  visibility: visible !important;
+  position: fixed !important;
+  display: block;
+  top: 5px; 
+  right: var(--csd-right, inherit);
+  left: var(--csd-left, inherit);
+  z-index: 10;
+  max-width: var(--csd-width);
+}
+
+/* fix ugly background color */
+#navigator-toolbox {
+  background-color: transparent !important;
+}
+
+/* hide buttons in fullscreen mode (video player and F11) */
+#main-window[inFullscreen="true"] .titlebar-buttonbox-container,
+#main-window[inDOMFullscreen="true"] .titlebar-buttonbox-container {
+  /* display: none !important; */
+  visibility: hidden !important;
+}
+
+/* remove empty space when in fullscreen mode (F11) */
+#main-window[inFullscreen="true"] #nav-bar {
+  margin-right: var(--csd-left) !important; 
+  margin-left: var(--csd-right) !important; 
+}
+/* END Client Side Decorations / Window Controls */

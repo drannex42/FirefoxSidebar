@@ -1,0 +1,37 @@
+:root {
+  --sidebar-width: 50px;
+  --toolbar-height: -50px;
+  --menubar-height: -74px;
+  --sidebar-padding: calc(var(--sidebar-width) + 5px);
+  --toolbar-start-end-padding: 5px !important;
+  --toolbar-start-end-padding: 5px !important;
+  /* Enable this (remove the comment surrounding) if you want a custom sidebar header color, this shouldn't be needed anymore but might be! */
+    /* --custom-sidebar-bg: #000 !important; */
+
+
+  /* ====== Entension Settings ====== */
+
+    /* === Window Control / Client Side Display Settings === */
+      --csd-width: 100px;
+
+      /* If you are putting this on the left or right side uncomment the side preferences below and comment the other*/
+      
+      /* Left Side: 
+          Default: --csd-left: 50px; --csd-margin-left: 92px;
+           
+        --csd-left: 50px; 
+        --csd-margin-left: 92px;
+      */ 
+
+      /* Right Side:
+          Defaults: --csd-right: 0px; --csd-margin-right: 95px;
+      */ 
+          --csd-right: 0px;
+          --csd-margin-right: 95px; 
+   
+     /* === END: Window Control / Client Side Display Settings === */
+
+
+
+
+}

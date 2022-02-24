@@ -1,0 +1,240 @@
+ 
+/*
+  Title: Drannex42's Personal userChrome.css for Firefox
+  Description: This is my personal userChrome for Firefox, I specifically clean up the interface, change the folder icon to Vivaldi's (much better) and reduce padding in some areas, and add some in others. This overall creates a much more streamlined interface.
+  Features: Streamlines interface, folder icon replacement, works best with my custom Tree Style Tabs interface (check it out! treestyletabs.css in the /firefox/ directory), removes tab bar.
+  Version: 12021.12.14 :: Fixed sidebar header position and background color.
+*/
+
+:root {
+  --sidebar-width: 50px;
+  --toolbar-height: -50px;
+  --menubar-height: -71px;
+  --toolmenubar-height: -80px;
+  --sidebar-padding: calc(var(--sidebar-width) + 5px);
+  --toolbar-start-end-padding: 5px !important;
+  --toolbar-start-end-padding: 5px !important;
+  --sidebar-bg-color: #fafafa; /* Change this if you have a different theme than the default light one to match the rest of your sideberry theme colors */
+}
+
+
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
+  opacity: 0;
+  pointer-events: none;
+}
+#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+    visibility: collapse !important;
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  /*! display: none; */
+}
+
+/*Collapse in default state and add transition*/
+#sidebar-box #sidebar:hover {
+    /*! overflow: visible !important; */
+    min-width: 40px;
+    max-width: 40px;
+    border-right: 1px solid var(--panel-separator-color);
+    z-index: 2;
+}
+
+/*All other sidebar-boxes should be larger on hover*/
+#sidebar-box:hover {
+  min-width: 350px !important;
+  max-width: 350px !important;
+  z-index: 1;
+  margin-right: -300px !important;
+}
+
+/*Tree Style Tabb && Sideberry specific sidebar width and size*/
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
+      min-width: 260px !important;
+      max-width: 260px !important;
+      z-index: 1;
+      margin-right: -210px !important;
+}
+
+
+#sidebar-header {
+  border: none !important;
+  background: var(--sidebar-bg-color) !important;
+}
+
+#sidebar-close, #sidebar-title, #sidebar-switcher-arrow {
+    display: none;
+    border: none;
+  }
+
+#sidebar-switcher-target {
+    border: none !important;
+    margin-left: 4.5px !important;
+    padding-top: 4px !important;
+    padding-bottom: 3px !important;
+}
+
+#sidebar-switcher-target:focus-visible:not(:hover, [open]), #sidebar-close:focus-visible:not(:hover, [open]) {
+  outline: none !important;
+}
+
+
+#main-window #PersonalToolbar {
+  margin-left: var(--sidebar-width);
+  padding: 2px 5px !important;
+  padding-top: 0px !important;
+  margin-top: -3px !important;
+}
+
+
+/* lock sidebar to height by doing the inverse margin of the toolbar element */
+#sidebar-box {
+  z-index: 1000 !important;
+  position: relative !important;
+  margin-top: var(--menubar-height) !important;
+  border-right: 1px solid #ccc;
+  background: #f6f7f8 !important;
+  transition: none !important;
+}
+
+#main-window[title^="Firefox Developer Edition"] #sidebar-box {
+  margin-top: var(--toolmenubar-height) !important;
+}
+
+/* lock sidebar to specified width */
+#sidebar-box {
+    min-width: var(--sidebar-width) !important;
+    max-width: var(--sidebar-width) !important;
+    overflow: hidden !important;
+     transition-property: width;
+    transition-duration: .25s;
+    transition-delay: .25s;
+    transition-timing-function: ease-in;
+}
+
+.browser-toolbar {
+  margin-left: var(--sidebar-width);
+}
+
+.sidebar-splitter {
+  opacity: 0 !important;
+  width: 0px !important;
+  border: none !Important;
+  --avatar-image-url: none !important;
+}
+
+/* hide sidebar header for tree style tabs sidebar */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  /*! display: none; */
+}
+
+#sidebarMenu-popup .subviewbutton {
+    min-width: 0px;
+    padding: 0;
+    margin: 0 !Important;
+}
+
+toolbarseparator {
+    display: none;
+}
+
+#sidebar { border-right: 0px solid #ccc; overflow: hidden;width: 50px !important;min-width: 50px !important;width: 100% !important;}
+
+
+/* OTHER CUSTOM OPTIONS */
+
+/* Hide the title bar */
+#titlebar{ visibility: collapse; }
+
+/* hide normal horizontal tab bar */
+#TabsToolbar { visibility: collapse; }
+
+
+:root:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
+  border: none !important;
+  background: none !important;
+}
+
+/* --- Prevent enlargement */
+#urlbar[breakout-extend] {
+    top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+    left: 0 !important;
+    width: 100% !important;
+}
+
+#urlbar[breakout-extend] #urlbar-input-container {
+    height: var(--urlbar-height) !important;
+    /*padding: 0px !important;*/
+    padding-block: 0px !important;
+    padding-inline: 0px !important;
+}
+.urlbarView-row {
+    padding: 0px 2px 0px 2px;
+}
+/* END Prevent enlargement --- */
+
+/*/* --- Reduce row paddings to make them more compact */
+.urlbarView-row {
+    padding: 2px 0px !important;
+    line-height: 1.2em !imortant;
+    margin: -1px;
+    margin-bottom:0px;
+}
+.urlbarView-row-inner {
+    padding-bottom: 6px !important;
+}
+.urlbarView {
+    margin: 0px !important;
+    width: 100% !important;
+}
+/* END Reduce row paddings to make them more compact --- */
+
+/* Disable Urlbar Animation */
+#urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-background {
+    animation-name: none !important;
+    animation: none !important;
+}
+
+/* --- More compact "Search with Google" rows */
+.urlbarView-row[dynamicType="onboardTabToSearch"] > .urlbarView-row-inner {
+    min-height: auto !important;
+    width: auto !important;
+}
+.urlbarView-row[dynamicType="onboardTabToSearch"] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-favicon {
+    margin-bottom: -1px;
+}
+/* END More compact "Search with Google" rows --- */
+
+/* Remove active border on the addressbar when in focus */
+ #nav-bar{ --toolbar-field-focus-border-color: #ccc }
+
+/* Remove box shadow on address bar */
+#urlbar-background, #searchbar {
+  box-shadow: none !important;
+}
+
+ /* Change Bookmark Folder Icon to the one Vivialdi uses */
+.bookmark-item[container] {
+    list-style-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMi4zNTcxNyAzLjM2MDc1QzIuMTMzMjMgMy41ODY5MyAyLjAwNTE1IDMuODkyMjEgMiA0LjIxMjAzVjExLjc4NzJDMS45OTQ0MSAxMS45NDc5IDIuMDIxNjMgMTIuMTA4MSAyLjA3OTk2IDEyLjI1NzdDMi4xMzgyOCAxMi40MDczIDIuMjI2NDggMTIuNTQzMSAyLjMzOTA0IDEyLjY1NjhDMi40NTE2IDEyLjc3MDUgMi41ODYxMyAxMi44NTk2IDIuNzM0MjUgMTIuOTE4NUMyLjg4MjM3IDEyLjk3NzQgMy4wNDA5MSAxMy4wMDQ5IDMuMiAxMi45OTkzSDEyLjhDMTMuMTE2NyAxMi45OTQxIDEzLjQxODkgMTIuODY0NyAxMy42NDI4IDEyLjYzODVDMTMuODY2OCAxMi40MTIzIDEzLjk5NDggMTIuMTA3MSAxNCAxMS43ODcyTDE0IDZDMTQgNS41IDEzLjUgNSAxMyA1SDhMNi44IDNIMy4yQzIuODgzMzQgMy4wMDUyIDIuNTgxMSAzLjEzNDU3IDIuMzU3MTcgMy4zNjA3NVpNMi45OTkzOSAxMS44MjJMMyAxMS44MDQ2VjQuMjIzMThDMy4wMDIyMyA0LjE2MTcxIDMuMDI3NDEgNC4xMDUxMSAzLjA2Nzc5IDQuMDY0MzJDMy4xMDc3MyA0LjAyMzk4IDMuMTU5MjkgNC4wMDIwOCAzLjIxMTYxIDRINi4yNDU4OUw3LjUgNkgxMi44QzEyLjkxMDUgNiAxMyA2LjA4Nzk2IDEzIDYuMTk4NDJDMTMgNy4xMzEwNyAxMyAxMS4wNjM2IDEzIDExLjc3NjFDMTIuOTk3OCAxMS44Mzc2IDEyLjk3MjYgMTEuODk0MiAxMi45MzIyIDExLjkzNUMxMi44OTIzIDExLjk3NTMgMTIuODQwNyAxMS45OTcyIDEyLjc4ODQgMTEuOTk5M0gzLjE4MjI3TDMuMTY0NTUgMTEuOTk5OUMzLjE0NDA2IDEyLjAwMDYgMy4xMjM0MyAxMS45OTcxIDMuMTAzODMgMTEuOTg5M0MzLjA4NDIxIDExLjk4MTUgMy4wNjU2NyAxMS45Njk0IDMuMDQ5NjYgMTEuOTUzM0MzLjAzMzY0IDExLjkzNzEgMy4wMjA1MSAxMS45MTcxIDMuMDExNjUgMTEuODk0NEMzLjAwMjc4IDExLjg3MTcgMi45OTg1MyAxMS44NDcgMi45OTkzOSAxMS44MjJaIj48L3BhdGg+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMi45OTkzOSAxMS44MjJMMyAxMS44MDQ2VjQuMjIzMThDMy4wMDIyMyA0LjE2MTcxIDMuMDI3NDEgNC4xMDUxMSAzLjA2Nzc5IDQuMDY0MzJDMy4xMDc3MyA0LjAyMzk4IDMuMTU5MjkgNC4wMDIwOCAzLjIxMTYxIDRINi4yNDU4OUw3LjUgNkgxMi44QzEyLjkxMDUgNiAxMyA2LjA4Nzk2IDEzIDYuMTk4NDJDMTMgNy4xMzEwNyAxMyAxMS4wNjM2IDEzIDExLjc3NjFDMTIuOTk3OCAxMS44Mzc2IDEyLjk3MjYgMTEuODk0MiAxMi45MzIyIDExLjkzNUMxMi44OTIzIDExLjk3NTMgMTIuODQwNyAxMS45OTcyIDEyLjc4ODQgMTEuOTk5M0gzLjE4MjI3TDMuMTY0NTUgMTEuOTk5OUMzLjE0NDA2IDEyLjAwMDYgMy4xMjM0MyAxMS45OTcxIDMuMTAzODMgMTEuOTg5M0MzLjA4NDIxIDExLjk4MTUgMy4wNjU2NyAxMS45Njk0IDMuMDQ5NjcgMTEuOTUzM0MzLjAzMzY0IDExLjkzNzEgMy4wMjA1MSAxMS45MTcxIDMuMDExNjUgMTEuODk0NEMzLjAwMjc4IDExLjg3MTcgMi45OTg1MyAxMS44NDcgMi45OTkzOSAxMS44MjJaIiBmaWxsLW9wYWNpdHk9IjAuMSI+PC9wYXRoPgo8L3N2Zz4=") !important;
+    padding-right: 15px !important;
+    margin-right: -1px !important;
+  }
+
+
+/* Add down arrow to folders on the bookmark bar */
+.bookmark-item[container]::after {
+  content: "ˇ";
+  opacity: 0.55;
+  padding-left: 3.5px;
+  font-size: 23px;
+  display: inline-block;
+  position: absolute;
+  top: 6.9px;
+}
+
+/* Change the Avatar size for the Firefox Account to what makes sense */
+[label="Firefox Account"] #fxa-avatar-image {
+    scale: 1.175;
+}
+
