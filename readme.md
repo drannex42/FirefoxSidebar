@@ -28,14 +28,15 @@ To use FirefoxSidebar you will need to clone this repo into your firefox profile
 
 Follow the instructions for adding this repository to your Firefox Profile.
 
-1. Navigate to `[about:profiles]` in your address bar
+1. Navigate to `about:profiles` in your address bar
 2. Click on the 'open root folder` button for your current profile 
 3. Open this folder in your terminal
-4. Clone this repo with the following command:
-  - `git clone https://github.com/drannex42/FirefoxSidebar.git "chrome"
-5. In firefox navigate to `[about:config]` in your address bar
+4. Clone this repo with the following command: `git clone https://github.com/drannex42/FirefoxSidebar.git "chrome"`
+5. InFfirefox navigate to `about:config` in your address bar
 6. change the characteristic `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` 
 7. Restart Firefox
+
+You could skip the clone step entirely if you manually add the FirefoxSidebar files to the "chrome" folder in your Firefox Profile (you will need to make a `chrome` folder if it doesn't exist!). 
 
 Visit [userchrome.org](https://www.userchrome.org/how-create-userchrome-css.html) if you are confused or have any questions. 
 
