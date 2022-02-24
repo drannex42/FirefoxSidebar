@@ -69,13 +69,13 @@ Please backup the `prefs.css` and the `custom.css` files before updating to a ne
 
 There are a number of preferences you can enable or disable in the `prefs.css` file. There are examples and descriptions of the different preferences within that file.
 
-### Custom Extensions
+### Custom Tweaks 
 
 For ease of use I suggest using the `custom.css` file to for your personal tweaks. 
 
 ### If you use FF without the bookmarks bar
 
-Then the sidebar switcher will be missing, you need to add this to your userChrome.css
+Then the sidebar switcher will be missing, you need to add this to your custom.css
 
 ```
 #sidebar-box {
@@ -83,11 +83,6 @@ Then the sidebar switcher will be missing, you need to add this to your userChro
 }
 ```
 
-## Other Considerations
-
-If you dislike some of my my other changes to FF (added vivaldi's folder icon, removed the superbox, cleaned up the borders, removed the titlebar) then remove everything below CUSTOM MODIFICATIONS in userChrome.css
-
-
 ## TreeStyleTabs (Legacy)
 
-Either add the treestyletabs.css to your TST addon preferences or import the treestyletabs-\*.json preferences to your TST addon (_prefered_)
+Either add the firefox/treestyletabs.css to your TST addon preferences or import the treestyletabs-\*.json preferences to your TST addon (_prefered_)
