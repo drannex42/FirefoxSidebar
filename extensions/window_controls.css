@@ -9,6 +9,8 @@
 /* allow the buttons to appear */
 .browser-toolbar {
   position: unset !important;
+  background-color: unset !important;
+  background-image: unset !important;
 }
 
 /* reserve space for buttons */
