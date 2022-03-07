@@ -75,13 +75,7 @@ For ease of use I suggest using the `custom.css` file to for your personal tweak
 
 ### If you use FF without the bookmarks bar
 
-Then the sidebar switcher will be missing, you need to add this to your custom.css
-
-```
-#sidebar-box {
-  --menubar-height: -42px !important;
-}
-```
+Then the sidebar switcher will be missing, edit `custom.css` and uncomment the relevant section.
 
 ## TreeStyleTabs (Legacy)
 
