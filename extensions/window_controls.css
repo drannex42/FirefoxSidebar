@@ -31,11 +31,6 @@
   max-width: var(--csd-width);
 }
 
-/* fix ugly background color */
-#navigator-toolbox {
-  background-color: transparent !important;
-}
-
 /* hide buttons in fullscreen mode (video player and F11) */
 #main-window[inFullscreen="true"] .titlebar-buttonbox-container,
 #main-window[inDOMFullscreen="true"] .titlebar-buttonbox-container {
