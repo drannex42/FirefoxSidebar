@@ -5,58 +5,60 @@
 */
 
 /* --- Prevent enlargement */
-
 #urlbar[breakout-extend] {
-    top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
-    left: 0 !important;
-    width: 100% !important;
+  top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+  left: 0 !important;
+  width: 100% !important;
 }
 
 #urlbar[breakout-extend] #urlbar-input-container {
-    height: var(--urlbar-height) !important;
-    /* padding: 0px !important; */
-    padding-block: 0px !important;
-    padding-inline: 0px !important;
+  height: var(--urlbar-height) !important;
+  /* padding: 0px !important; */
+  padding-block: 0px !important;
+  padding-inline: 0px !important;
 }
 .urlbarView-row {
-    padding: 0px 2px 0px 2px;
+  padding: 0px 2px 0px 2px;
 }
 /* END Prevent enlargement --- */
 
 /*/* --- Reduce row paddings to make them more compact */
 .urlbarView-row {
-    padding: 2px 0px !important;
-    line-height: 1.2em !important;
-    margin: -1px;
-    margin-bottom: 0px;
+  padding: 2px 0px !important;
+  line-height: 1.2em !important;
+  margin: -1px;
+  margin-bottom: 0px;
 }
 .urlbarView-row-inner {
-    padding-bottom: 6px !important;
+  padding-bottom: 6px !important;
 }
 .urlbarView {
-    margin: 0px !important;
-    width: 100% !important;
+  margin: 0px !important;
+  width: 100% !important;
 }
 /* END Reduce row paddings to make them more compact --- */
 
 /* Disable Urlbar Animation */
 #urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-background {
-    animation-name: none !important;
-    animation: none !important;
+  animation-name: none !important;
+  animation: none !important;
 }
+/* END Disable Urlbar Animation */
 
 /* --- More compact "Search with Google" rows */
 .urlbarView-row[dynamicType="onboardTabToSearch"] > .urlbarView-row-inner {
-    min-height: auto !important;
-    width: auto !important;
+  min-height: auto !important;
+  width: auto !important;
 }
 .urlbarView-row[dynamicType="onboardTabToSearch"] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-favicon {
-    margin-bottom: -1px;
+  margin-bottom: -1px;
 }
 /* END More compact "Search with Google" rows --- */
 
 /* Remove active border on the addressbar when in focus */
- #nav-bar{ --toolbar-field-focus-border-color: #ccc }
+#nav-bar{
+  --toolbar-field-focus-border-color: #ccc;
+}
 
 /* Remove box shadow on address bar */
 #urlbar-background,

@@ -19,11 +19,11 @@
 
 /*Collapse in default state and add transition*/
 #sidebar-box #sidebar:hover {
-    /*! overflow: visible !important; */
-    min-width: 40px;
-    max-width: 40px;
-    border-right: none !important; /* border-right: 1px solid var(--sidebar-border-color) !important; */
-    z-index: 2;
+  /*! overflow: visible !important; */
+  min-width: 40px;
+  max-width: 40px;
+  border-right: none !important; /* border-right: 1px solid var(--sidebar-border-color) !important; */
+  z-index: 2;
 }
 
 /*All other sidebar-boxes should be larger on hover*/
@@ -38,31 +38,30 @@
 
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
-      min-width: 260px !important;
-      max-width: 260px !important;
-      z-index: 1;
-      margin-right: -210px !important;
+  min-width: 260px !important;
+  max-width: 260px !important;
+  z-index: 1;
+  margin-right: -210px !important;
 }
 
 #sidebar-header {
   border: none !important;
   border-right: 1px solid var(--sidebar-border-color);
   background: var(--custom-sidebar-bg, --sidebar-background-color) !important;
-
 }
 
 #sidebar-close,
 #sidebar-title,
 #sidebar-switcher-arrow {
-    display: none;
-    border: none;
-  }
+  display: none;
+  border: none;
+}
 
 #sidebar-switcher-target {
-    border: none !important;
-    margin-left: 4.5px !important;
-    padding-top: 4px !important;
-    padding-bottom: 6px !important;
+  border: none !important;
+  margin-left: 4.5px !important;
+  padding-top: 4px !important;
+  padding-bottom: 6px !important;
 }
 
 #sidebar-switcher-target:focus-visible:not(:hover, [open]),
@@ -83,13 +82,13 @@
 
 /* lock sidebar to specified width */
 #sidebar-box {
-    min-width: var(--sidebar-width) !important;
-    max-width: var(--sidebar-width) !important;
-    overflow: hidden !important;
-     transition-property: width;
-    transition-duration: .25s;
-    transition-delay: .25s;
-    transition-timing-function: ease-in;
+  min-width: var(--sidebar-width) !important;
+  max-width: var(--sidebar-width) !important;
+  overflow: hidden !important;
+  transition-property: width;
+  transition-duration: .25s;
+  transition-delay: .25s;
+  transition-timing-function: ease-in;
 }
 
 
@@ -106,7 +105,7 @@
 }
 
 #sidebar-box:hover:after {
-    top: 42px;
+  top: 42px;
 }
 
 
@@ -118,13 +117,13 @@
 }
 
 #sidebarMenu-popup .subviewbutton {
-    min-width: 0px;
-    padding: 0;
-    margin: 0 !important;
+  min-width: 0px;
+  padding: 0;
+  margin: 0 !important;
 }
 
 toolbarseparator {
-    display: none;
+  display: none;
 }
 
 #sidebar {

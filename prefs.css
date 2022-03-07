@@ -17,18 +17,17 @@
       /* If you are putting this on the left or right side uncomment the side preferences below and comment the other*/
 
       /* Left Side:
-          Default: --csd-left: 50px; --csd-margin-left: 92px;
+        Default: --csd-left: 50px; --csd-margin-left: 92px;
 
-        --csd-left: 50px;
-        --csd-margin-left: 92px;
+      --csd-left: 50px;
+      --csd-margin-left: 92px;
       */
 
       /* Right Side:
           Defaults: --csd-right: 0px; --csd-margin-right: 95px;
       */
-          --csd-right: 0px;
-          --csd-margin-right: 95px;
+      --csd-right: 0px;
+      --csd-margin-right: 95px;
 
-     /* === END: Window Control / Client Side Display Settings === */
-
+    /* === END: Window Control / Client Side Display Settings === */
 }
