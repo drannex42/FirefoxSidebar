@@ -5,22 +5,25 @@
   Version: 12022.02.23 :: Implemented an extension system, and seperated different components into their own files.
 */
 
- /* Preferences / Settings ::
-    Use this file to set your preferences (left or right window controls, colors, margins, this will save them in one place for easier future updating
+/*
+  Preferences / Settings
+  Use this file to set your preferences (left or right window controls, colors, margins, this will save them in one place for easier future updating
 */
-  @import url('./prefs.css');
+@import url("./prefs.css");
 
- /* Sidebar ::
-    This file is for the sidebar implementation
+/*
+  Sidebar
+  This file is for the sidebar implementation
 */
-  @import url('./extensions/sidebar.css');
+@import url("./extensions/sidebar.css");
 
-/* Extensions ::
-   To enable or disable specific extensions just comment/uncomment the line below
+/*
+  Extensions
+  To enable or disable specific extensions just comment/uncomment the line below
 */
 
-@import url('./extensions/window_controls.css');
-@import url('./extensions/bookmark_arrow.css');
-@import url('./extensions/superbox_removal.css');
+@import url("./extensions/window_controls.css");
+@import url("./extensions/bookmark_arrow.css");
+@import url("./extensions/superbox_removal.css");
 
-@import url('./custom.css');
+@import url("./custom.css");

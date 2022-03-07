@@ -9,11 +9,12 @@
 }
 
 #sidebar-box > #browser,
-#webextpanels-window{
+#webextpanels-window {
   background: transparent !important;
 }
 
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]
+  #sidebar-header {
   /*! display: none; */
 }
 
@@ -69,28 +70,24 @@
   outline: none !important;
 }
 
-
-/* lock sidebar to height by doing the inverse margin of the toolbar element */
 #sidebar-box {
+  /* lock sidebar to height by doing the inverse margin of the toolbar element */
   background: var(--custom-sidebar-bg) !important;
   z-index: 1000 !important;
   position: relative !important;
   margin-top: var(--menubar-height) !important;
   border-right: none;
   transition: none !important;
-}
 
-/* lock sidebar to specified width */
-#sidebar-box {
+  /* lock sidebar to specified width */
   min-width: var(--sidebar-width) !important;
   max-width: var(--sidebar-width) !important;
   overflow: hidden !important;
   transition-property: width;
-  transition-duration: .25s;
-  transition-delay: .25s;
+  transition-duration: 0.25s;
+  transition-delay: 0.25s;
   transition-timing-function: ease-in;
 }
-
 
 #sidebar-box::after {
   background: var(--sidebar-border-color) !important;
@@ -107,7 +104,6 @@
 #sidebar-box:hover:after {
   top: 42px;
 }
-
 
 .sidebar-splitter {
   opacity: 0 !important;

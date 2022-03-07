@@ -6,7 +6,9 @@
 
 /* --- Prevent enlargement */
 #urlbar[breakout-extend] {
-  top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+  top: calc(
+    (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+  ) !important;
   left: 0 !important;
   width: 100% !important;
 }
@@ -39,7 +41,8 @@
 /* END Reduce row paddings to make them more compact --- */
 
 /* Disable Urlbar Animation */
-#urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-background {
+#urlbar[breakout][breakout-extend][breakout-extend-animate]
+  > #urlbar-background {
   animation-name: none !important;
   animation: none !important;
 }
@@ -50,13 +53,16 @@
   min-height: auto !important;
   width: auto !important;
 }
-.urlbarView-row[dynamicType="onboardTabToSearch"] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-favicon {
+.urlbarView-row[dynamicType="onboardTabToSearch"]
+  > .urlbarView-row-inner
+  > .urlbarView-no-wrap
+  > .urlbarView-favicon {
   margin-bottom: -1px;
 }
 /* END More compact "Search with Google" rows --- */
 
 /* Remove active border on the addressbar when in focus */
-#nav-bar{
+#nav-bar {
   --toolbar-field-focus-border-color: #ccc;
 }
 

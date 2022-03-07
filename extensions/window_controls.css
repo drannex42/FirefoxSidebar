@@ -15,7 +15,10 @@
 
 /* reserve space for buttons */
 #nav-bar {
-  padding-right: var(--csd-margin-right, 10px) !important;  /* The addition of the "10px" is so that there will be an area where you can grab and move the window */ 
+  padding-right: var(
+    --csd-margin-right,
+    10px
+  ) !important; /* The addition of the "10px" is so that there will be an area where you can grab and move the window */
   margin-left: var(--csd-margin-left) !important;
 }
 
