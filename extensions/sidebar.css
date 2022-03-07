@@ -1,0 +1,143 @@
+/* 
+  Extension (Core): Sidebar 
+  Description: This is the core implenration of the sidebar, used in drannex42's FirefoxSidebar.
+  Repository URL: https://github.com/drannex42/FirefoxSidebar
+*/
+
+#main-window #TabsToolbar {
+  visibility: collapse;
+}
+
+#sidebar-box > #browser,
+#webextpanels-window{ background: transparent !important }
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  /*! display: none; */
+}
+
+/*Collapse in default state and add transition*/
+#sidebar-box #sidebar:hover {
+    /*! overflow: visible !important; */
+    min-width: 40px;
+    max-width: 40px;
+    border-right: none !Important /* border-right: 1px solid var(--sidebar-border-color) !important; */
+    z-index: 2;
+}
+
+/*All other sidebar-boxes should be larger on hover*/
+#sidebar-box:hover {
+  min-width: 350px !important;
+  max-width: 350px !important;
+  z-index: 1;
+  margin-right: -300px !important;
+}
+
+/*Tree Style Tabs && Sideberry specific sidebar width and size*/
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
+      min-width: 260px !important;
+      max-width: 260px !important;
+      z-index: 1;
+      margin-right: -210px !important;
+}
+
+#sidebar-header {
+  border: none !important;
+  border-right: 1px solid var(--sidebar-border-color);
+  background: var(--custom-sidebar-bg, --sidebar-background-color) !important;
+
+}
+
+#sidebar-close, #sidebar-title, #sidebar-switcher-arrow {
+    display: none;
+    border: none;
+  }
+
+#sidebar-switcher-target {
+    border: none !important;
+    margin-left: 4.5px !important;
+    padding-top: 4px !important;
+    padding-bottom: 6px !important;
+}
+
+#sidebar-switcher-target:focus-visible:not(:hover, [open]), #sidebar-close:focus-visible:not(:hover, [open]) {
+  outline: none !important;
+}
+
+
+/* lock sidebar to height by doing the inverse margin of the toolbar element */
+#sidebar-box {
+  background: var(--custom-sidebar-bg) !important;
+  z-index: 1000 !important;
+  position: relative !important;
+  margin-top: var(--menubar-height) !important;
+  border-right: none;
+  transition: none !important;
+}
+
+/* lock sidebar to specified width */
+#sidebar-box {
+    min-width: var(--sidebar-width) !important;
+    max-width: var(--sidebar-width) !important;
+    overflow: hidden !important;
+     transition-property: width;
+    transition-duration: .25s;
+    transition-delay: .25s;
+    transition-timing-function: ease-in;
+}
+
+
+#sidebar-box::after {
+  background: var(--sidebar-border-color) !important;
+  margin-left: 207px;
+  z-index: 9999999;
+  position: absolute;
+  content: " ";
+  width: 1px;
+  height: 100%;
+  z-index: 999999999;
+  top: 0;
+  right: 0px;
+}
+
+#sidebar-box:hover:after {
+    top: 42px;
+}
+
+
+.sidebar-splitter {
+  opacity: 0 !important;
+  width: 0px !important;
+  border: none !Important;
+  --avatar-image-url: none !important;
+}
+
+#sidebarMenu-popup .subviewbutton {
+    min-width: 0px;
+    padding: 0;
+    margin: 0 !Important;
+}
+
+toolbarseparator {
+    display: none;
+}
+
+#sidebar { border-right: none !important; overflow: hidden;width: 50px !important;min-width: 50px !important;width: 100% !important;}
+
+#nav-bar-customization-target {
+  z-index: 99999;
+  position: relative;
+}
+
+.browser-toolbar {
+  padding-left: var(--sidebar-width) !important;
+  position: relative !important;
+}
+
+#PersonalToolbar {
+  padding: 2px 5px !important;
+  padding-top: 0px !important;
+  margin-top: 0px !important;
+  padding-left: calc(var(--sidebar-width) + 6px) !important;
+}

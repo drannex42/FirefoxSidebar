@@ -1,0 +1,6 @@
+/* OTHER CUSTOM OPTIONS */
+
+/* Change the Avatar size for the Firefox Account to what makes sense */
+[label="Firefox Account"] #fxa-avatar-image {
+    scale: 1.25;
+}
