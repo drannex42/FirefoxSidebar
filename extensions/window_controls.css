@@ -9,16 +9,11 @@
 /* allow the buttons to appear */
 .browser-toolbar {
   position: unset !important;
-  background-color: unset !important;
-  background-image: unset !important;
 }
 
 /* reserve space for buttons */
 #nav-bar {
-  padding-right: var(
-    --csd-margin-right,
-    10px
-  ) !important; /* The addition of the "10px" is so that there will be an area where you can grab and move the window */
+  padding-right: var(--csd-margin-right) !important;
   margin-left: var(--csd-margin-left) !important;
 }
 
@@ -37,13 +32,12 @@
 /* hide buttons in fullscreen mode (video player and F11) */
 #main-window[inFullscreen="true"] .titlebar-buttonbox-container,
 #main-window[inDOMFullscreen="true"] .titlebar-buttonbox-container {
-  /* display: none !important; */
   visibility: hidden !important;
 }
 
 /* remove empty space when in fullscreen mode (F11) */
 #main-window[inFullscreen="true"] #nav-bar {
-  margin-right: var(--csd-left) !important;
-  margin-left: var(--csd-right) !important;
+  padding-right: 0px !important;
+  margin-left: 0px !important;
 }
 /* END Client Side Decorations / Window Controls */
