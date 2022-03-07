@@ -22,10 +22,10 @@
   visibility: visible !important;
   position: fixed !important;
   display: block;
+  z-index: 999999999;
   top: var(--csd-top, inherit);
   right: var(--csd-right, inherit);
   left: var(--csd-left, inherit);
-  z-index: 10;
   max-width: var(--csd-width);
 }
 
