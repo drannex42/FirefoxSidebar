@@ -47,7 +47,6 @@
 
 #sidebar-header {
   border: none !important;
-  border-right: 1px solid var(--sidebar-border-color);
   background: var(--custom-sidebar-bg, --sidebar-background-color) !important;
 }
 
