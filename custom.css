@@ -1,13 +1,10 @@
 /* OTHER CUSTOM OPTIONS */
 
 /* Change the Avatar size for the Firefox Account to what makes sense */
-[label="Firefox Account"] #fxa-avatar-image {
-  scale: 1.25;
-}
+@import url("./extensions/custom/avatar_size.css");
 
-/* fix sidebar button if bookmarks toolbar is hidden */
-/*
-#sidebar-box {
-  --menubar-height: -42px !important;
-}
-*/
+/* fix sidebar switcher if bookmarks toolbar is hidden */
+/* @import url("./extensions/custom/fix_hidden_bookmarks.css"); */
+
+/* hide sidebar switcher */
+/* @import url("./extensions/custom/hide_sidebar_switcher.css"); */
