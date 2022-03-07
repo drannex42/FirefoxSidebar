@@ -1,6 +1,6 @@
-/* 
-  Extension: Superbox Removal (and compaction) 
-  Description: This removes the superbox and fixes some padding around the urlbar. 
+/*
+  Extension: Superbox Removal (and compaction)
+  Description: This removes the superbox and fixes some padding around the urlbar.
   Repository URL: https://github.com/drannex42/FirefoxSidebar
 */
 
@@ -14,7 +14,7 @@
 
 #urlbar[breakout-extend] #urlbar-input-container {
     height: var(--urlbar-height) !important;
-    /*padding: 0px !important;*/
+    /* padding: 0px !important; */
     padding-block: 0px !important;
     padding-inline: 0px !important;
 }
@@ -26,9 +26,9 @@
 /*/* --- Reduce row paddings to make them more compact */
 .urlbarView-row {
     padding: 2px 0px !important;
-    line-height: 1.2em !imortant;
+    line-height: 1.2em !important;
     margin: -1px;
-    margin-bottom:0px;
+    margin-bottom: 0px;
 }
 .urlbarView-row-inner {
     padding-bottom: 6px !important;
@@ -59,6 +59,7 @@
  #nav-bar{ --toolbar-field-focus-border-color: #ccc }
 
 /* Remove box shadow on address bar */
-#urlbar-background, #searchbar {
+#urlbar-background,
+#searchbar {
   box-shadow: none !important;
 }

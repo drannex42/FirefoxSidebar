@@ -1,4 +1,4 @@
-/* 
+/*
   Extension: Window Controls / Client Side Decorations (CSD)
   Description: This brings the window controls into the main bar (where the address bar exists). Please see the prefs.css folder for switching the sides from left to right. 
   Repository URL: https://github.com/drannex42/FirefoxSidebar
@@ -22,7 +22,7 @@
   visibility: visible !important;
   position: fixed !important;
   display: block;
-  top: 5px; 
+  top: 5px;
   right: var(--csd-right, inherit);
   left: var(--csd-left, inherit);
   z-index: 10;
@@ -43,7 +43,7 @@
 
 /* remove empty space when in fullscreen mode (F11) */
 #main-window[inFullscreen="true"] #nav-bar {
-  margin-right: var(--csd-left) !important; 
-  margin-left: var(--csd-right) !important; 
+  margin-right: var(--csd-left) !important;
+  margin-left: var(--csd-right) !important;
 }
 /* END Client Side Decorations / Window Controls */

@@ -1,5 +1,5 @@
-/* 
-  Extension (Core): Sidebar 
+/*
+  Extension (Core): Sidebar
   Description: This is the core implenration of the sidebar, used in drannex42's FirefoxSidebar.
   Repository URL: https://github.com/drannex42/FirefoxSidebar
 */
@@ -9,7 +9,9 @@
 }
 
 #sidebar-box > #browser,
-#webextpanels-window{ background: transparent !important }
+#webextpanels-window{
+  background: transparent !important;
+}
 
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
   /*! display: none; */
@@ -20,7 +22,7 @@
     /*! overflow: visible !important; */
     min-width: 40px;
     max-width: 40px;
-    border-right: none !Important /* border-right: 1px solid var(--sidebar-border-color) !important; */
+    border-right: none !important; /* border-right: 1px solid var(--sidebar-border-color) !important; */
     z-index: 2;
 }
 
@@ -49,7 +51,9 @@
 
 }
 
-#sidebar-close, #sidebar-title, #sidebar-switcher-arrow {
+#sidebar-close,
+#sidebar-title,
+#sidebar-switcher-arrow {
     display: none;
     border: none;
   }
@@ -61,7 +65,8 @@
     padding-bottom: 6px !important;
 }
 
-#sidebar-switcher-target:focus-visible:not(:hover, [open]), #sidebar-close:focus-visible:not(:hover, [open]) {
+#sidebar-switcher-target:focus-visible:not(:hover, [open]),
+#sidebar-close:focus-visible:not(:hover, [open]) {
   outline: none !important;
 }
 
@@ -109,21 +114,27 @@
 .sidebar-splitter {
   opacity: 0 !important;
   width: 0px !important;
-  border: none !Important;
+  border: none !important;
   --avatar-image-url: none !important;
 }
 
 #sidebarMenu-popup .subviewbutton {
     min-width: 0px;
     padding: 0;
-    margin: 0 !Important;
+    margin: 0 !important;
 }
 
 toolbarseparator {
     display: none;
 }
 
-#sidebar { border-right: none !important; overflow: hidden;width: 50px !important;min-width: 50px !important;width: 100% !important;}
+#sidebar {
+  border-right: none !important;
+  overflow: hidden;
+  width: 50px !important;
+  min-width: 50px !important;
+  width: 100% !important;
+}
 
 #nav-bar-customization-target {
   z-index: 99999;
