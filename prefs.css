@@ -12,6 +12,7 @@
 
     /* === Window Control / Client Side Display Settings === */
       --csd-width: 100px;
+      --csd-top: 6px;
 
       /* If you are putting this on the left or right side uncomment the side preferences below and comment the other*/
 
