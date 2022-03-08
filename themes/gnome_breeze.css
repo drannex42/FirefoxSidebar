@@ -1,0 +1,25 @@
+@import url("../extensions/window_controls.css");
+@import url("../extensions/hide_sidebar_switcher.css");
+
+.browser-toolbar {
+  padding-left: 2px !important;
+  position: unset !important;
+  background-color: unset !important;
+  background-image: unset !important;
+}
+
+#nav-bar {
+  padding-right: 127px !important;
+}
+
+.titlebar-buttonbox-container {
+  right: 20px;
+}
+
+toolbarbutton {
+  margin: 3px !important;
+}
+
+toolbar[id="nav-bar"] {
+  min-height: 46px !important;
+}
