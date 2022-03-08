@@ -53,8 +53,11 @@
   Please enable only one theme at a time!
 */
 
-/* GNOME Breeze */
-@import url("./themes/gnome_breeze.css");
+/* KDE Breeze */
+/* @import url("./themes/kde_breeze.css"); */
+
+/* KDE Oxygen */
+/* @import url("./themes/kde_oxygen.css"); */
 
 /* ========================================================================= */
 
