@@ -1,0 +1,11 @@
+#sidebar-header {
+  display: none;
+}
+
+#sidebar-box {
+  --menubar-height: 0px !important;
+}
+
+.browser-toolbar {
+  padding-left: unset !important;
+}

@@ -1,27 +1,71 @@
- 
 /*
   Title: Drannex42's FirefoxSidebar / Vertical Tabs
-  Description:  Vertical tab design for Firefox with dynamic indentation:: Sideberry and TreeStyleTabs (Legacy) themes available! 
+  Description: Vertical tab design for Firefox with dynamic indentation::
+    Sideberry and TreeStyleTabs (Legacy) themes available!
   Repository URL: https://github.com/drannex42/FirefoxSidebar
-  Version: 12022.02.23 :: Implemented an extension system, and seperated different components into their own files.
+  Version: 12022.02.23
 */
 
- /* Preferences / Settings :: 
-    Use this file to set your preferences (left or right window controls, colors, margins, this will save them in one place for easier future updating 
-*/
-  @import url('./prefs.css');
-
- /* Sidebar :: 
-    This file is for the sidebar implementation
-*/
-  @import url('./extensions/sidebar.css');
-
-/* Extensions ::
-   To enable or disable specific extensions just comment/uncomment the line below 
+/*
+  Preferences / Settings
+  Use this file to set your preferences (left or right window controls,
+  colors, margins, this will save them in one place for easier future updating
 */
 
-@import url('./extensions/window_controls.css');
-@import url('./extensions/bookmark_arrow.css');
-@import url('./extensions/superbox_removal.css');
+@import url("./prefs.css");
 
-@import url('./custom.css');
+/* ========================================================================= */
+
+/*
+  Sidebar
+  This file is for the sidebar implementation
+*/
+@import url("./extensions/sidebar.css");
+
+/*
+  Extensions
+  To enable/disable specific extensions just comment/uncomment the line below.
+*/
+
+/* add CSD / window controls */
+@import url("./extensions/window_controls.css");
+
+/* add a little arrow next to folders in bookmarks toolbar */
+@import url("./extensions/bookmark_arrow.css");
+
+/* heavily customize superbox (flat look, colors, smaller entries,...) */
+@import url("./extensions/superbox_removal.css");
+
+/* change the avatar size for the Firefox Account to what makes sense */
+@import url("./extensions/avatar_size.css");
+
+/* fix sidebar switcher if bookmarks toolbar is hidden */
+/* @import url("./extensions/fix_hidden_bookmarks.css"); */
+
+/* hide sidebar switcher */
+/* @import url("./extensions/hide_sidebar_switcher.css"); */
+
+/* ========================================================================= */
+
+/*
+  Themes
+  To enable/disable specific theme just comment/uncomment the line below.
+  Please enable only one theme at a time!
+*/
+
+/* GTK Adwaita */
+/* @import url("./themes/gtk_adwaita.css"); */
+
+/* GTK Breeze */
+/* @import url("./themes/gtk_breeze.css"); */
+
+/* ========================================================================= */
+
+/*
+  Custom tweaks
+  Create a file called `custom.css` and place your tweaks there.
+*/
+
+@import url("./custom.css");
+
+/* ========================================================================= */
