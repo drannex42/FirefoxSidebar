@@ -11,6 +11,12 @@
   --sidebar-padding: calc(var(--sidebar-width) + 5px);
   --toolbar-start-end-padding: 5px !important;
 
+  /* Custom Sidebar/Header Backround :: 
+     This sets the background for the other sidebar options (bookmarks, history, in case it is transparent from a theme that is not set up properly 
+  */
+    /* --custom-sidebar-bg: Field; /* Default: Field (Disabled) */
+    /* --custom-sidebar-header-bg: Field; /* Default: Field (Disabled) */
+
   /* ====== Extension Settings ====== */
 
   /* Window Control / Client Side Display Settings === 
@@ -24,12 +30,12 @@
     /*  
       CSD - Left Side === 
       Default: --csd-left: 50px; --csd-margin-left: 92px;
-    /*
-
-      --csd-left: 50px;
-      --csd-margin-left: 92px;
-
-    /* END: CSD - Left Side ====== */
+    */
+    
+      /*
+        --csd-left: 50px;
+        --csd-margin-left: 92px;
+      */
 
     /*
       CSD - Right Side ===
@@ -39,17 +45,7 @@
       --csd-right: 0px;
       --csd-margin-right: 95px;
 
-    */
-    /* END: CSD - Right Side ====== */
-
   /* === END: Window Control / Client Side Display Settings === */
-
-
-  /* === Custom Sidebar Header Background (Legacy) === */
- 
-    /* --custom-sidebar-bg: #000 !important; */
- 
-  /* === END: Custom Sidebar Header Background (Legacy) === */
 
 /* === END: Extension Settings === */
 

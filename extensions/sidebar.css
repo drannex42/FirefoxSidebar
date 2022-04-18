@@ -1,16 +1,20 @@
 /*
   Extension (Core): Sidebar
   Description: This is the core implenration of the sidebar, used in drannex42's FirefoxSidebar.
-  Repository URL: https://github.com/drannex42/FirefoxSidebar
+  Repository URL: https://github.com/drannex42/
+  Version: v12022.04.17 
 */
 
 #main-window #TabsToolbar {
   visibility: collapse;
 }
 
+
+
 #sidebar-box > #browser,
 #webextpanels-window {
   background: transparent !important;
+
 }
 
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]
@@ -48,7 +52,7 @@
 #sidebar-header {
   border: none !important;
   border-right: 1px solid var(--sidebar-border-color);
-  background: var(--custom-sidebar-bg, --sidebar-background-color) !important;
+  background: var(--custom-sidebar-header-bg, transparent) !important;
 }
 
 #sidebar-close,
@@ -72,12 +76,12 @@
 
 #sidebar-box {
   /* lock sidebar to height by doing the inverse margin of the toolbar element */
-  background: var(--custom-sidebar-bg) !important;
   z-index: 1000 !important;
   position: relative !important;
   margin-top: var(--menubar-height) !important;
   border-right: none;
   transition: none !important;
+  background: transparent !important;
 
   /* lock sidebar to specified width */
   min-width: var(--sidebar-width) !important;
@@ -128,6 +132,7 @@ toolbarseparator {
   width: 50px !important;
   min-width: 50px !important;
   width: 100% !important;
+  background: var(--custom-sidebar-bg, --sidebar-background);
 }
 
 #nav-bar-customization-target {
