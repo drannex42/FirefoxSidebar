@@ -2,7 +2,7 @@
   Extension (Core): Sidebar
   Description: This is the core implenration of the sidebar, used in drannex42's FirefoxSidebar.
   Repository URL: https://github.com/drannex42/
-  Version: v12022.04.17 
+  Version: v12022.10.18 
 */
 
 #main-window #TabsToolbar {
@@ -42,7 +42,8 @@
 /*Tree Style Tabs && Sideberry specific sidebar width and size*/
 
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover,
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar:hover {
   min-width: 260px !important;
   max-width: 260px !important;
   z-index: 1;
