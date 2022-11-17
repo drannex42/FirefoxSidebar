@@ -1,1 +1,27 @@
 /* Custom Styles */
+
+#main-window #TabsToolbar {
+  visibility: visible !important;
+}
+
+#PersonalToolbar {
+  padding-left: 0 !important;
+}
+
+
+
+
+
+
+/*#navigator-toolbox {visibility: collapse;}*/
+
+/*
+#TabsToolbar {
+      visibility: collapse !important;
+ }
+*/
+
+/*#sidebar-box #sidebar-header {
+  display: none;
+}
+*/
