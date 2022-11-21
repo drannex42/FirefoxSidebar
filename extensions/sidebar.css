@@ -1,8 +1,8 @@
 /*
   Extension (Core): Sidebar
-  Description: This is the core implenration of the sidebar, used in drannex42's FirefoxSidebar.
-  Repository URL: https://github.com/drannex42/
-  Version: v12022.04.17 
+  Description: This is the core implementation of the sidebar used in drannex42's FirefoxSidebar.
+  Repository URL: https://github.com/drannex42/FirefoxSidebar
+  Version: v12022.11.22 (YYYYY.MM.DD) 
 */
 
 #main-window #TabsToolbar {
@@ -23,29 +23,62 @@
 }
 
 /*Collapse in default state and add transition*/
-#sidebar-box #sidebar:hover {
+#sidebar-box {
   /*! overflow: visible !important; */
-  min-width: 40px;
-  max-width: 40px;
   border-right: none !important; /* border-right: 1px solid var(--sidebar-border-color) !important; */
   z-index: 2;
+  border-right: none !important;
+  width: 100% !important;
+  background: var(--custom-sidebar-bg, --sidebar-background);
+  
+  /* lock sidebar to height by doing the inverse margin of the toolbar element */
+  z-index: 1000 !important;
+  position: relative !important;
+  margin-top: var(--menubar-height) !important;
+  border-right: none;
+  transition: none !important;
+
+  /* lock sidebar to specified width */
+  min-width: var(--sidebar-width) !important;
+  max-width: var(--sidebar-width) !important;
+  overflow: hidden !important;
+  transition-property: width;
+  transition-duration: 0.25s;
+  transition-delay: 0.25s;
+  transition-timing-function: ease-in;
+}
+
+#sidebar-box::after {
+  background: var(--sidebar-border-color) !important;
+  margin-left: 207px;
+  z-index: 9999999;
+  position: absolute;
+  content: " ";
+  width: 1px;
+  height: 100%;
+  top: 0;
+  right: 0px;
+}
+
+#sidebar-box:hover:after {
+  top: 42px;
 }
 
 /*All other sidebar-boxes should be larger on hover*/
-#sidebar-box:hover {
+#sidebar-box:hover, #sidebar-box #sidebar:hover {
   min-width: 350px !important;
   max-width: 350px !important;
-  z-index: 1;
+  z-index: 999;
   margin-right: -300px !important;
 }
 
 /*Tree Style Tabs && Sideberry specific sidebar width and size*/
 
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover,
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar:hover {
   min-width: 260px !important;
   max-width: 260px !important;
-  z-index: 1;
   margin-right: -210px !important;
 }
 
@@ -74,40 +107,7 @@
   outline: none !important;
 }
 
-#sidebar-box {
-  /* lock sidebar to height by doing the inverse margin of the toolbar element */
-  z-index: 1000 !important;
-  position: relative !important;
-  margin-top: var(--menubar-height) !important;
-  border-right: none;
-  transition: none !important;
-  background: transparent !important;
 
-  /* lock sidebar to specified width */
-  min-width: var(--sidebar-width) !important;
-  max-width: var(--sidebar-width) !important;
-  overflow: hidden !important;
-  transition-property: width;
-  transition-duration: 0.25s;
-  transition-delay: 0.25s;
-  transition-timing-function: ease-in;
-}
-
-#sidebar-box::after {
-  background: var(--sidebar-border-color) !important;
-  margin-left: 207px;
-  z-index: 9999999;
-  position: absolute;
-  content: " ";
-  width: 1px;
-  height: 100%;
-  top: 0;
-  right: 0px;
-}
-
-#sidebar-box:hover:after {
-  top: 42px;
-}
 
 .sidebar-splitter {
   opacity: 0 !important;
@@ -124,15 +124,6 @@
 
 toolbarseparator {
   display: none;
-}
-
-#sidebar {
-  border-right: none !important;
-  overflow: hidden;
-  width: 50px !important;
-  min-width: 50px !important;
-  width: 100% !important;
-  background: var(--custom-sidebar-bg, --sidebar-background);
 }
 
 #nav-bar-customization-target {

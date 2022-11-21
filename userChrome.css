@@ -29,13 +29,13 @@
     @import url("./extensions/window_controls.css");
 
   /* Bookmark Arrows :: add a little arrow next to folders in bookmarks toolbar */
-    @import url("./extensions/bookmark_arrow.css");
+  /*  @import url("./extensions/bookmark_arrow.css"); */
 
   /* Superbox Removal :: heavily customize superbox (flat look, colors, smaller entries,...) */
     @import url("./extensions/superbox_removal.css");
 
   /* Avatar Size :: change the avatar size for the Firefox Account to what makes sense */
-    @import url("./extensions/avatar_size.css");
+   /*  @import url("./extensions/avatar_size.css"); */
 
   /* fix sidebar switcher if bookmarks toolbar is hidden */
     /* @import url("./extensions/fix_hidden_bookmarks.css"); */
@@ -69,3 +69,6 @@
   @import url("./custom.css");
 
 /* ========================================================================= */
+
+
+

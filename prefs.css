@@ -15,7 +15,7 @@
      This sets the background for the other sidebar options (bookmarks, history, in case it is transparent from a theme that is not set up properly 
   */
     /* --custom-sidebar-bg: Field; /* Default: Field (Disabled) */
-    /* --custom-sidebar-header-bg: Field; /* Default: Field (Disabled) */
+    --custom-sidebar-header-bg: #000; /* Default: Field (Disabled) */
 
   /* ====== Extension Settings ====== */
 
@@ -25,7 +25,7 @@
     =========================================================================
   */
     --csd-width: 100px;
-    --csd-top: 6px;
+    --csd-top: 8px;
 
     /*  
       CSD - Left Side === 
@@ -42,8 +42,8 @@
       Defaults: --csd-right: 0px; --csd-margin-right: 95px;
     */ 
 
-      --csd-right: 0px;
-      --csd-margin-right: 95px;
+      --csd-right: 36px;
+      --csd-margin-right: 130px;
 
   /* === END: Window Control / Client Side Display Settings === */
 
