@@ -3,6 +3,7 @@
   Description: This is the core implementation of the sidebar used in drannex42's FirefoxSidebar.
   Repository URL: https://github.com/drannex42/FirefoxSidebar
   Version: v12022.11.22 (YYYYY.MM.DD) 
+*/
 
 #main-window #TabsToolbar {
   visibility: collapse;
