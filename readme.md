@@ -5,6 +5,8 @@
 ## Example
 Video of the extension in action: [https://i.imgur.com/HaLvkFc.mp4](https://i.imgur.com/HaLvkFc.mp4)
 
+https://user-images.githubusercontent.com/4322153/205100497-f56637c4-1d46-4c15-b349-d0b53f2838a0.mp4
+
 ## Features:
   - Edge-like vertical tab design
   - Tree style tab layout support (works with Sideberry & TST (legacy) version)
