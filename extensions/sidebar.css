@@ -42,10 +42,10 @@
   min-width: var(--sidebar-width) !important;
   max-width: var(--sidebar-width) !important;
   overflow: hidden !important;
-  transition-property: width;
-  transition-duration: 0.25s;
-  transition-delay: 0.25s;
-  transition-timing-function: ease-in;
+  transition-property: min-width, max-width !important;
+  transition-duration: 0.2s !important;
+  transition-delay: 0.1s !important;
+  transition-timing-function: ease-in !important;
 }
 
 #sidebar-box::after {
