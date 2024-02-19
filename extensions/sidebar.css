@@ -9,16 +9,12 @@
   visibility: collapse;
 }
 
-
-
 #sidebar-box > #browser,
 #webextpanels-window {
   background: transparent !important;
-
 }
 
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]
-  #sidebar-header {
+#sidebar-box[sidebarcommand='treestyletab_piro_sakura_ne_jp-sidebar-action'] #sidebar-header {
   /*! display: none; */
 }
 
@@ -30,7 +26,7 @@
   border-right: none !important;
   width: 100% !important;
   background: var(--custom-sidebar-bg, --sidebar-background);
-  
+
   /* lock sidebar to height by doing the inverse margin of the toolbar element */
   z-index: 1000 !important;
   position: relative !important;
@@ -42,10 +38,10 @@
   min-width: var(--sidebar-width) !important;
   max-width: var(--sidebar-width) !important;
   overflow: hidden !important;
-  transition-property: width;
-  transition-duration: 0.25s;
-  transition-delay: 0.25s;
-  transition-timing-function: ease-in;
+  transition-property: min-width, max-width !important;
+  transition-duration: 0.2s !important;
+  transition-delay: 0.1s !important;
+  transition-timing-function: ease-in !important;
 }
 
 #sidebar-box::after {
@@ -53,7 +49,7 @@
   margin-left: 207px;
   z-index: 9999999;
   position: absolute;
-  content: " ";
+  content: ' ';
   width: 1px;
   height: 100%;
   top: 0;
@@ -65,7 +61,8 @@
 }
 
 /*All other sidebar-boxes should be larger on hover*/
-#sidebar-box:hover, #sidebar-box #sidebar:hover {
+#sidebar-box:hover,
+#sidebar-box #sidebar:hover {
   min-width: 350px !important;
   max-width: 350px !important;
   z-index: 999;
@@ -74,9 +71,9 @@
 
 /*Tree Style Tabs && Sideberry specific sidebar width and size*/
 
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover,
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar:hover {
+#sidebar-box[sidebarcommand='treestyletab_piro_sakura_ne_jp-sidebar-action']:hover,
+#sidebar-box[sidebarcommand='_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action']:hover,
+#sidebar-box[sidebarcommand='_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action'] #sidebar:hover {
   min-width: 260px !important;
   max-width: 260px !important;
   margin-right: -210px !important;
@@ -106,8 +103,6 @@
 #sidebar-close:focus-visible:not(:hover, [open]) {
   outline: none !important;
 }
-
-
 
 .sidebar-splitter {
   opacity: 0 !important;
