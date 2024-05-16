@@ -31,9 +31,6 @@
   /* Bookmark Arrows :: add a little arrow next to folders in bookmarks toolbar */
   /*  @import url("./extensions/bookmark_arrow.css"); */
 
-  /* Superbox Removal :: heavily customize superbox (flat look, colors, smaller entries,...) */
-    @import url("./extensions/superbox_removal.css");
-
   /* Avatar Size :: change the avatar size for the Firefox Account to what makes sense */
    /*  @import url("./extensions/avatar_size.css"); */
 
@@ -44,21 +41,6 @@
     /* @import url("./extensions/hide_sidebar_switcher.css"); */
 
 /* END EXTENSIONS ========================================================== */
-
-/*
-  Themes ::
-  To enable/disable specific theme just comment/uncomment the line below.
-  Please enable only one theme at a time!
-  =========================================================================
-*/
-
-  /* GTK Adwaita */
-    /* @import url("./themes/gtk_adwaita.css"); */
-
-  /* GTK Breeze */
-    /* @import url("./themes/gtk_breeze.css"); */
-
-/* END THEMES ========================================================== */
 
 /*
   Custom tweaks ::

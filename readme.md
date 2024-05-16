@@ -18,10 +18,6 @@ https://user-images.githubusercontent.com/4322153/205100497-f56637c4-1d46-4c15-b
   - Pinned tabs (right click to close)
   - Built in CSS Extension Management
 
-## Updates
-
-Release notes have migrated to [here](https://github.com/drannex42/FirefoxSidebar/releases). You can find prior release notes before v12021.12.22 [here](https://github.com/drannex42/FirefoxSidebar/releases/tag/v12021.12.22).
-
 # How to use
 
 To use FirefoxSidebar you will need to clone this repo into your firefox profile as the `chrome` folder and then follow the Sideberry section below. Both are outlined below in how to do so.
@@ -42,9 +38,9 @@ You could skip the clone step entirely if you manually add the FirefoxSidebar fi
 
 Visit [userchrome.org](https://www.userchrome.org/how-create-userchrome-css.html) if you are confused or have any questions.
 
-## 2. Sideberry
+## 2. Sidebery (Sideberry)
 
-Load the `sideberry-data.json` file into your Sideberry addon by using the 'import' section under 'Help'.
+Load the `sidebery-data.json` file into your Sidebery addon by using the 'import' section under 'Help'.
 
 If you dislike any of the theme presets for dark or light themes, or you have a particular color scheme in mind then navigate to Sideberry Settings > Style Editor (found at the end of the settings sidebar). The preference is to replace the values in the right panel, not in the theme editor to the left - this way you can easily update to newer versions in the future.
 
@@ -54,14 +50,12 @@ All extensions can be found in `/extensions`.
 
 In version 2022.02.23 we broke up the components into extensions using css imports. This makes adding and removing features incredibly easy.
 
-**The following extensions are added:**
+**The following extensions are added by default:**
 
 - [Window Controls / Client Side Decorations (CSD)](/extensions/window_controls.css)
   - This adds the window controls to be inline with your address bar.
-- [Superbox Removal](/extensions/superbox_removal.css)
-  - This removes the superbox and fixes the address bar padding.
-- [Bookmark Arrows](/extensions/bookmark_arrow.css)
-  - This adds a nice little arrow next to your bookmark folders.
+
+There are a number of additional 'extensions' added in that folder. 
 
 ## User Settings
 
@@ -82,3 +76,7 @@ Then the sidebar switcher will be missing, edit `custom.css` and uncomment the r
 ## TreeStyleTabs (Legacy)
 
 Either add the firefox/treestyletabs.css to your TST addon preferences or import the treestyletabs-\*.json preferences to your TST addon (_prefered_)
+
+## Updates
+
+Release notes have migrated to [here](https://github.com/drannex42/FirefoxSidebar/releases). You can find prior release notes before v12021.12.22 [here](https://github.com/drannex42/FirefoxSidebar/releases/tag/v12021.12.22).

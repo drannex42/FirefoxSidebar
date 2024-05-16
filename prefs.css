@@ -15,7 +15,7 @@
      This sets the background for the other sidebar options (bookmarks, history, in case it is transparent from a theme that is not set up properly 
   */
     /* --custom-sidebar-bg: Field; /* Default: Field (Disabled) */
-    --custom-sidebar-header-bg: #000; /* Default: Field (Disabled) */
+    /* --custom-sidebar-header-bg: #000; */
 
   /* ====== Extension Settings ====== */
 
