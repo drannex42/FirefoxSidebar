@@ -6,9 +6,11 @@
 
 /* --- Prevent enlargement */
 #urlbar[breakout-extend] {
-  top: calc(
-    (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
-  ) !important;
+  /* top: calc( */
+    /* (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2 */
+  /* ) !important; */ 
+  /* Fix due to deprecation https://www.reddit.com/r/firefox/comments/1cs3g49/address_bar_suggestions_going_up_instead_of_down/ */
+  top: calc((var(--urlbar-container-height, --urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
   left: 0 !important;
   width: 100% !important;
 }
