@@ -71,7 +71,7 @@ For ease of use I suggest using the `custom.css` file to for your personal tweak
 
 ### If you use FF without the bookmarks bar
 
-Then the sidebar switcher will be missing, edit `custom.css` and uncomment the relevant section.
+Then the sidebar switcher will be missing, edit `userChrome.css` and uncomment the relevant section.
 
 ## TreeStyleTabs (Legacy)
 
