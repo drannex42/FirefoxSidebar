@@ -27,6 +27,7 @@
   max-width: var(--uc-sidebar-width) !important;
   z-index:1;
   margin-top: -73px;
+  z-index:999999;
 }
 
 
